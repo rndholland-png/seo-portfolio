@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orca Security Migration | Randy Holland</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Urbanist', sans-serif; background-color: #0a0a0a; color: #ffffff; }
+    </style>
+</head>
+<body class="p-8">
+    <div class="max-w-4xl mx-auto">
+        <a href="forensics.html" class="text-lime-400 hover:text-white transition-colors mb-8 inline-block">← Back to Forensics Lab</a>
+        
+        <header class="mb-12">
+            <span class="text-xs font-bold tracking-widest text-lime-400 uppercase bg-lime-400/10 px-3 py-1 rounded-full">Migration Recovery</span>
+            <h1 class="text-5xl font-bold mt-4 mb-4">Orca Security Migration</h1>
+            <p class="text-xl text-gray-400">Surgically restoring link equity and indexation safety flags within a critical 1-week post-launch window.</p>
+        </header>
+
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mb-12">
+            <div class="border border-gray-800 bg-gray-900/20 p-6 rounded-xl">
+                <span class="text-sm text-gray-500 block mb-1">Timeframe</span>
+                <span class="text-2xl font-bold text-white">7 Days</span>
+            </div>
+            <div class="border border-gray-800 bg-gray-900/20 p-6 rounded-xl">
+                <span class="text-sm text-gray-500 block mb-1">Link Equity Retained</span>
+                <span class="text-2xl font-bold text-lime-400">99.8%</span>
+            </div>
+            <div class="border border-gray-800 bg-gray-900/20 p-6 rounded-xl col-span-2 md:col-span-1">
+                <span class="text-sm text-gray-500 block mb-1">Dev Collaboration</span>
+                <span class="text-2xl font-bold text-white">Direct JIRA/Git</span>
+            </div>
+        </div>
+
+        <div class="space-y-12">
+            <section>
+                <h2 class="text-2xl font-bold mb-4 text-lime-400">The Challenge</h2>
+                <p class="text-gray-300 leading-relaxed">
+                    Following a rapid platform migration, critical structural issues emerged that threatened Orca Security's existing organic search footprint. Legacy high-authority backlinks were mapping to default 404 pages, and unintended search-exclusion directives began impacting key commercial pages. A swift intervention was required to coordinate with the Web Development team to protect brand equity.
+                </p>
+            </section>
+
+            <section class="border-t border-gray-950 pt-8">
+                <h2 class="text-2xl font-bold mb-4 text-lime-400">Forensic Investigation & Diagnosis</h2>
+                <div class="bg-gray-900/40 border border-gray-800 rounded-xl p-6 space-y-4">
+                    <p class="text-gray-300">Using a combination of server log analysis and crawl comparisons, I identified three primary structural failures:</p>
+                    <ul class="list-disc pl-6 space-y-2 text-gray-400 text-sm">
+                        <li><strong>Redirect Loop Cascade:</strong> Legacy redirect rules conflicted with the new routing architecture, trapping search engines in multi-hop redirect loops.</li>
+                        <li><strong>Indexation Blockers:</strong> Staging site <code class="text-lime-300 bg-gray-950 px-1 rounded">noindex</code> meta tags accidentally bypassed release filters and deployed directly to production.</li>
+                        <li><strong>Broken High-Value Backlinks:</strong> Crucial third-party editorial links pointing to outdated resource subdirectories were resolving to 404s instead of their closest semantic equivalents.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="border-t border-gray-950 pt-8">
+                <h2 class="text-2xl font-bold mb-4 text-lime-400">Surgical Execution</h2>
+                <p class="text-gray-300 leading-relaxed mb-6">
+                    Rather than delivering a generic, massive PDF audit that developers would likely put on the back burner, I worked directly alongside the Engineering team inside their workflow:
+                </p>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-gray-900/20 p-6 rounded-xl border border-gray-800">
+                        <h3 class="font-bold text-white mb-2">Direct Ticket Integration</h3>
+                        <p class="text-sm text-gray-400">Translated SEO requirements into granular, action-oriented JIRA tasks, providing developers with exact rewrite rules, source-target paths, and expected server headers (200 OK, 301 Redirect).</p>
+                    </div>
+                    <div class="bg-gray-900/20 p-6 rounded-xl border border-gray-800">
+                        <h3 class="font-bold text-white mb-2">Pre-deployment Crawl Verification</h3>
+                        <p class="text-sm text-gray-400">Executed isolated sandboxed crawls on hotfix branches to verify meta robots declarations, canonical targets, and redirect logic before changes went live to production.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="border-t border-gray-950 pt-8 pb-12">
+                <h2 class="text-2xl font-bold mb-4 text-lime-400">The Outcome</h2>
+                <p class="text-gray-300 leading-relaxed">
+                    By treating SEO technical issues with dev-level precision, we bypassed the typical post-migration dip. Indexation warnings in Google Search Console were cleared within 72 hours, 100% of the priority link-equity paths were successfully restored via single-hop permanent redirects, and organic visibility remained completely stable through the transition.
+                </p>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
