@@ -9,129 +9,192 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         body { font-family: 'Urbanist', sans-serif; background-color: #0a0a0a; color: #ffffff; }
+        .slide { display: none; }
+        .slide.active { display: block; }
     </style>
 </head>
 <body class="p-8">
-    <div class="max-w-4xl mx-auto">
+    <div class="max-w-6xl mx-auto">
         <a href="strategy.html" class="text-lime-400 hover:text-white transition-colors mb-8 inline-block">← Back to Strategy Lab</a>
         
         <header class="mb-12">
             <span class="text-xs font-bold tracking-widest text-lime-400 uppercase bg-lime-400/10 px-3 py-1 rounded-full">Enterprise Pitch & Strategy</span>
             <h1 class="text-5xl font-bold mt-4 mb-4">Enterprise eCommerce Blueprint</h1>
-            <p class="text-xl text-gray-400">A comprehensive 3-pillar SEO & CRO organic growth strategy built for scale.</p>
+            <p class="text-xl text-gray-400">The 40-Hour Strategic Pitch Presentation built for Wayfair.</p>
         </header>
 
         <section class="mb-12 bg-gray-900/10 border border-gray-800 rounded-xl p-8">
             <h2 class="text-2xl font-bold mb-4 text-white flex items-center">
-                <i class="fa-solid fa-person-chalkboard text-lime-400 mr-3"></i> The Strategic Context
+                <i class="fa-solid fa-person-chalkboard text-lime-400 mr-3"></i> The Pitch Framework
             </h2>
             <p class="text-gray-300 leading-relaxed mb-4">
-                This enterprise framework was originally engineered as a comprehensive, deep-dive pitch deck analyzing <strong>Wayfair's</strong> public organic profile. Drawing on extensive market data, competitive intelligence, and search forensic diagnostics, this strategy was built to address a post-pandemic normalization of search volume while insulating the brand against major Google Search Core & helpful content volatility.
-            </p>
-            <p class="text-gray-300 leading-relaxed">
-                Rather than relying on basic keyword recommendations, the project represents a <strong>40-hour deep dive</strong> into technical crawl budget limitations, JavaScript rendering bloat, and programmatic E-E-A-T architecture, culminating in a commercial roadmap that links search visibility directly to revenue attribution.
+                This blueprint represents a deep-dive analysis of <strong>Wayfair's</strong> public organic search footprint, engineered for a final-round pitch at a premier national SEO agency. Built entirely from competitive intelligence and external search forensics, this strategy outlines how a multi-billion-dollar brand can insulate itself against algorithmic volatility while scaling programmatic conversions.
             </p>
         </section>
 
-        <h2 class="text-2xl font-bold mb-6 text-lime-400 border-t border-gray-950 pt-8 flex items-center">
-            <i class="fa-solid fa-laptop-code mr-3"></i> Strategy Deck Walkthrough
-        </h2>
-
-        <div class="space-y-8">
-            
-            <div class="bg-gray-950 border border-gray-800 rounded-xl p-8 hover:border-lime-400/40 transition-colors">
-                <div class="flex justify-between items-center mb-4">
-                    <span class="text-xs font-bold uppercase tracking-wider text-lime-400 bg-lime-400/10 px-3 py-1 rounded-full">Slide 1: Market Context</span>
-                    <span class="font-mono text-xs text-gray-500">01 / 05</span>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-3">Re-Establishing the Organic Growth Engine</h3>
-                <p class="text-sm text-gray-400 leading-relaxed mb-4">
-                    Setting the baseline expectations. Addressing Wayfair's post-2022 organic correction by looking past temporary search volume spikes and defining a resilient, evergreen channel built to weather search algorithmic landscape shifts.
-                </p>
-                <div class="border-l-2 border-lime-400/30 pl-4 py-1 text-xs text-gray-500 italic">
-                    Focus: Transitioning the brand from raw volume-chasing models to high-trust topical authority hubs.
-                </div>
+        <section class="mb-12 border-t border-gray-950 pt-8">
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-2xl font-bold text-lime-400 flex items-center">
+                    <i class="fa-solid fa-presentation-screen mr-3"></i> Interactive Pitch Deck & Notes
+                </h2>
+                <a href="wayfair-deck.pdf" target="_blank" class="text-xs font-bold text-lime-400 hover:text-white bg-lime-400/10 border border-lime-400/20 px-4 py-2 rounded-lg transition-all flex items-center gap-2">
+                    <i class="fa-solid fa-download"></i> Download PDF Deck
+                </a>
             </div>
 
-            <div class="bg-gray-950 border border-gray-800 rounded-xl p-8 hover:border-lime-400/40 transition-colors">
-                <div class="flex justify-between items-center mb-4">
-                    <span class="text-xs font-bold uppercase tracking-wider text-lime-400 bg-lime-400/10 px-3 py-1 rounded-full">Slide 2: The Opportunity Matrix</span>
-                    <span class="font-mono text-xs text-gray-500">02 / 05</span>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-4">The 30,000-Foot Strategic Opportunity</h3>
+            <div class="grid lg:grid-cols-12 gap-8">
                 
-                <div class="grid md:grid-cols-3 gap-4 mb-4">
-                    <div class="bg-gray-900/40 p-4 rounded border border-gray-900">
-                        <span class="text-[11px] font-bold text-lime-400 block mb-1">01. Technical & On-Page</span>
-                        <p class="text-[11px] text-gray-400">Eliminating JavaScript bloat, reforming directory paths, and refining Core Web Vitals at scale.</p>
+                <div class="lg:col-span-7 bg-gray-950 border border-gray-800 rounded-2xl overflow-hidden shadow-2xl h-[500px]">
+                    <iframe 
+                        src="wayfair-deck.pdf" 
+                        class="w-full h-full border-none"
+                        title="Wayfair SEO Strategy Pitch Deck">
+                    </iframe>
+                </div>
+
+                <div class="lg:col-span-5 bg-gray-950 border border-gray-800 rounded-2xl overflow-hidden shadow-2xl flex flex-col justify-between h-[500px]">
+                    <div class="p-6 md:p-8 flex-grow overflow-y-auto">
+                        
+                        <div id="slide-1" class="slide active">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-xs font-bold uppercase tracking-wider text-lime-400 bg-lime-400/10 px-2.5 py-1 rounded-full">Slide 1: Market Context</span>
+                                <span class="font-mono text-xs text-gray-500">01 / 05</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Re-Establishing the Organic Growth Engine</h3>
+                            <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                                Addressing Wayfair's post-2022 organic traffic correction by looking past temporary post-pandemic normalization. This phase establishes a resilient, evergreen channel built to weather search landscape shifts and Google's Helpful Content framework.
+                            </p>
+                            <div class="border-l-2 border-lime-400/30 pl-4 py-1 text-xs text-gray-500 italic">
+                                Core Goal: Elevating the brand from raw transactional keyword volume-chasing models to a high-trust, authoritative semantic network.
+                            </div>
+                        </div>
+
+                        <div id="slide-2" class="slide">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-xs font-bold uppercase tracking-wider text-lime-400 bg-lime-400/10 px-2.5 py-1 rounded-full">Slide 2: Strategic Pillars</span>
+                                <span class="font-mono text-xs text-gray-500">02 / 05</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">The 30,000-Foot Opportunity Matrix</h3>
+                            <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                                To win in crowded SERPs, Wayfair must dominate the entire user search journey. Our strategy focuses on three core pillars:
+                            </p>
+                            <div class="space-y-2 text-[11px]">
+                                <div class="bg-gray-900/40 p-2.5 rounded border border-gray-900">
+                                    <strong class="text-lime-400 block">01. Technical Excellence</strong>
+                                    Optimizing crawling/indexing at scale while stripping mobile JS bloat.
+                                </div>
+                                <div class="bg-gray-900/40 p-2.5 rounded border border-gray-900">
+                                    <strong class="text-lime-400 block">02. Content Authority</strong>
+                                    Leveraging design-focused SMEs and building comprehensive Quality Guides.
+                                </div>
+                                <div class="bg-gray-900/40 p-2.5 rounded border border-gray-900">
+                                    <strong class="text-lime-400 block">03. Clicks to Conversions</strong>
+                                    Bridging on-page ranking data with GA4 product funnel revenue attribution.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="slide-3" class="slide">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-xs font-bold uppercase tracking-wider text-lime-400 bg-lime-400/10 px-2.5 py-1 rounded-full">Slide 3: Technical</span>
+                                <span class="font-mono text-xs text-gray-500">03 / 05</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Technical Foundation & Mobile CWV</h3>
+                            <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                                Large-scale eCommerce platforms live or die by their crawling efficiency. Addressing heavy client-side JavaScript execution models on mobile viewports improves Core Web Vitals (LCP/TBT) and unlocks indexation limits.
+                            </p>
+                            <div class="font-mono text-[10px] bg-black p-3 rounded border border-gray-900 text-gray-500 space-y-1">
+                                <div class="text-lime-400">// STRATEGIC TACTICS:</div>
+                                <div>• Streamline nesting paths to prevent URL link dilution</div>
+                                <div>• Implement aggressive deferred loading rules for non-critical JS</div>
+                                <div>• Broaden Product & Breadcrumb schema mappings across layers</div>
+                            </div>
+                        </div>
+
+                        <div id="slide-4" class="slide">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-xs font-bold uppercase tracking-wider text-lime-400 bg-lime-400/10 px-2.5 py-1 rounded-full">Slide 4: Authority</span>
+                                <span class="font-mono text-xs text-gray-500">04 / 05</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">E-E-A-T & Verifiable Author Networks</h3>
+                            <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                                Transitioning informational content into robust, citation-grade assets. By assigning verifiable author profile pages to internal interior designers and merchants, we satisfy search engines' need for expert-led content.
+                            </p>
+                            <div class="bg-lime-950/10 border border-lime-900/20 p-3 rounded text-[11px] text-gray-400">
+                                <strong class="text-lime-400">The Above-the-Fold Shift:</strong> Migrating SEO-rich contextual copy from category page footers to prominent above-the-fold interface modules, serving user research intent instantly.
+                            </div>
+                        </div>
+
+                        <div id="slide-5" class="slide">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-xs font-bold uppercase tracking-wider text-lime-400 bg-lime-400/10 px-2.5 py-1 rounded-full">Slide 5: CRO & Revenue</span>
+                                <span class="font-mono text-xs text-gray-500">05 / 05</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Transforming Clicks into Capital</h3>
+                            <p class="text-xs text-gray-400 leading-relaxed mb-4">
+                                SEO doesn't stop at visibility. By connecting organic traffic loops with A/B layout testing and full-funnel CRO metrics, we tie organic actions straight to business profitability.
+                            </p>
+                            <div class="grid grid-cols-3 gap-1.5 text-center text-[9px] font-mono font-bold text-lime-400">
+                                <div class="bg-gray-900/50 p-2 rounded border border-gray-900">Organic Revenue / AOV</div>
+                                <div class="bg-gray-900/50 p-2 rounded border border-gray-900">Category Conv. Rate</div>
+                                <div class="bg-gray-900/50 p-2 rounded border border-gray-900">Visibility to CTR Trend</div>
+                            </div>
+                        </div>
+
                     </div>
-                    <div class="bg-gray-900/40 p-4 rounded border border-gray-900">
-                        <span class="text-[11px] font-bold text-lime-400 block mb-1">02. Content E-E-A-T</span>
-                        <p class="text-[11px] text-gray-400">Leveraging design-focused Subject Matter Experts and deploying structured trust networks.</p>
+
+                    <div class="bg-gray-900/40 px-6 py-3 border-t border-gray-900 flex justify-between items-center shrink-0">
+                        <button id="prev-btn" onclick="changeSlide(-1)" class="text-[11px] font-bold text-gray-500 hover:text-white transition-colors flex items-center gap-1.5">
+                            <i class="fa-solid fa-arrow-left"></i> Prev
+                        </button>
+                        <div class="flex gap-1.5">
+                            <span class="dot h-1.5 w-1.5 rounded-full bg-lime-400"></span>
+                            <span class="dot h-1.5 w-1.5 rounded-full bg-gray-700"></span>
+                            <span class="dot h-1.5 w-1.5 rounded-full bg-gray-700"></span>
+                            <span class="dot h-1.5 w-1.5 rounded-full bg-gray-700"></span>
+                            <span class="dot h-1.5 w-1.5 rounded-full bg-gray-700"></span>
+                        </div>
+                        <button id="next-btn" onclick="changeSlide(1)" class="text-[11px] font-bold text-lime-400 hover:text-white transition-colors flex items-center gap-1.5">
+                            Next <i class="fa-solid fa-arrow-right"></i>
+                        </button>
                     </div>
-                    <div class="bg-gray-900/40 p-4 rounded border border-gray-900">
-                        <span class="text-[11px] font-bold text-lime-400 block mb-1">03. Clicks to Conversions</span>
-                        <p class="text-[11px] text-gray-400">Integrating search signals directly with CRO and business-level revenue attribution.</p>
-                    </div>
                 </div>
+
             </div>
+        </section>
 
-            <div class="bg-gray-950 border border-gray-800 rounded-xl p-8 hover:border-lime-400/40 transition-colors">
-                <div class="flex justify-between items-center mb-4">
-                    <span class="text-xs font-bold uppercase tracking-wider text-lime-400 bg-lime-400/10 px-3 py-1 rounded-full">Slide 3: The Technical Foundation</span>
-                    <span class="font-mono text-xs text-gray-500">03 / 05</span>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-3">Enterprise Crawlability & Rendering Performance</h3>
-                <p class="text-sm text-gray-400 leading-relaxed mb-4">
-                    Analyzing complex crawl patterns on mega-eCommerce structures. Deferring heavy, non-critical client-side JavaScript execution models to recover Largest Contentful Paint (LCP) and Total Blocking Time (TBT) metrics on mobile viewports.
-                </p>
-                <div class="font-mono text-xs bg-black p-4 rounded border border-gray-900 text-gray-500 space-y-1">
-                    <div class="text-lime-400">// CORE ACTIONS SCHEDULED:</div>
-                    <div>• Streamline SKU directory patterns to maximize crawl budget efficiency</div>
-                    <div>• Optimize internal linking nodes across Category Landing Pages (CLPs)</div>
-                    <div>• Build out programmatic nested Breadcrumb and Product Schema layers</div>
-                </div>
-            </div>
-
-            <div class="bg-gray-950 border border-gray-800 rounded-xl p-8 hover:border-lime-400/40 transition-colors">
-                <div class="flex justify-between items-center mb-4">
-                    <span class="text-xs font-bold uppercase tracking-wider text-lime-400 bg-lime-400/10 px-3 py-1 rounded-full">Slide 4: Content Authority</span>
-                    <span class="font-mono text-xs text-gray-500">04 / 05</span>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-3">Topical Depth & Verifiable Author Networks</h3>
-                <p class="text-sm text-gray-400 leading-relaxed mb-4">
-                    Transitioning informational guides from basic keyword-matching content into highly structured citation hubs. Humanizing the digital footprint by formalizing structured Author Profiles for internal designers and product category experts.
-                </p>
-                <div class="bg-lime-950/10 border border-lime-900/20 p-4 rounded text-xs text-gray-400">
-                    <strong class="text-lime-400">Strategic Innovation: Above-the-Fold Authority</strong><br>
-                    Recommend migrating legacy SEO descriptive copy blocks from category page footers directly into high-visibility above-the-fold interface modules, instantly signaling intent matching to both crawlers and prospective customers.
-                </div>
-            </div>
-
-            <div class="bg-gray-950 border border-gray-800 rounded-xl p-8 hover:border-lime-400/40 transition-colors">
-                <div class="flex justify-between items-center mb-4">
-                    <span class="text-xs font-bold uppercase tracking-wider text-lime-400 bg-lime-400/10 px-3 py-1 rounded-full">Slide 5: Commercial Conversion</span>
-                    <span class="font-mono text-xs text-gray-500">05 / 05</span>
-                </div>
-                <h3 class="text-xl font-bold text-white mb-3">Bridging Organic Search Strategy & CRO</h3>
-                <p class="text-sm text-gray-400 leading-relaxed mb-4">
-                    Ensuring that incremental visibility gains from upstream structural and semantic optimizations directly align with commercial objectives. Designing cohesive tracking models that connect Google Search Console and GA4 into unified dashboards.
-                </p>
-                <div class="grid grid-cols-3 gap-2 text-center text-xs font-mono font-bold text-lime-400">
-                    <div class="bg-gray-900/50 p-2 rounded border border-gray-900">Organic Revenue / AOV</div>
-                    <div class="bg-gray-900/50 p-2 rounded border border-gray-900">Category Conversion Rate</div>
-                    <div class="bg-gray-900/50 p-2 rounded border border-gray-900">Visibility to CTR Trend</div>
-                </div>
-            </div>
-
-        </div>
-
-        <section class="border-t border-gray-950 pt-8 pb-12 mt-12">
-            <h2 class="text-2xl font-bold mb-4 text-lime-400">The Ultimate Takeaway</h2>
+        <section class="border-t border-gray-950 pt-8 pb-12">
+            <h2 class="text-2xl font-bold mb-4 text-lime-400">Behind the Strategy</h2>
             <p class="text-gray-300 leading-relaxed mb-6">
-                This project represents more than a static SEO proposal. It is a testament to the comprehensive, dev-level analysis and strategic research I invest in every enterprise challenge. By viewing technical performance, semantic topical authority, and commercial conversion as a single, interdependent ecosystem, this blueprint offers a template for scaling organic search channels at the highest, multi-million page level.
+                Analyzing a multi-million-page domain without access to its search console or analytics dashboards requires strict technical diagnostics. This framework highlights the rigorous research, structural problem-solving, and client-ready preparation I bring to high-stakes organic projects.
             </p>
         </section>
     </div>
+
+    <script>
+        let currentSlide = 1;
+        const totalSlides = 5;
+
+        function changeSlide(direction) {
+            document.getElementById(`slide-${currentSlide}`).classList.remove('active');
+            
+            currentSlide += direction;
+            if (currentSlide > totalSlides) currentSlide = 1;
+            if (currentSlide < 1) currentSlide = totalSlides;
+            
+            document.getElementById(`slide-${currentSlide}`).classList.add('active');
+            
+            const dots = document.querySelectorAll('.dot');
+            dots.forEach((dot, index) => {
+                if (index === currentSlide - 1) {
+                    dot.classList.remove('bg-gray-700');
+                    dot.classList.add('bg-lime-400');
+                } else {
+                    dot.classList.remove('bg-lime-400');
+                    dot.classList.add('bg-gray-700');
+                }
+            });
+        }
+    </script>
 </body>
 </html>
