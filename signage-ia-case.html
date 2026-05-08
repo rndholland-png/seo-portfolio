@@ -1,89 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enterprise IA Blueprint | Randy Holland</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        body { font-family: 'Urbanist', sans-serif; background-color: #0a0a0a; color: #ffffff; }
-    </style>
-</head>
-<body class="p-8">
-    <div class="max-w-4xl mx-auto">
-        <a href="strategy.html" class="text-lime-400 hover:text-white transition-colors mb-8 inline-block">← Back to Strategy Lab</a>
-        
-        <header class="mb-12">
-            <span class="text-xs font-bold tracking-widest text-lime-400 uppercase bg-lime-400/10 px-3 py-1 rounded-full">Information Architecture</span>
-            <h1 class="text-5xl font-bold mt-4 mb-4">The OPO Blueprint</h1>
-            <p class="text-xl text-gray-400">Re-engineering Northwest Visual Systems for intent-based lead generation.</p>
-        </header>
-
-        <section class="mb-12 bg-gray-900/10 border border-gray-800 rounded-xl p-8">
-            <h2 class="text-2xl font-bold mb-4 text-white">The Core Strategy: "Fresh OPO"</h2>
-            <p class="text-gray-300 leading-relaxed">
-                The primary challenge was a site suffering from <strong>content sprawl and keyword cannibalization</strong>. Multiple service pages competed for the same broad terms, diluting authority and confusing users. My solution was a complete On-Page Optimization (OPO) realign—shifting from generic listings to specialized, high-intent verticals (Indoor, Outdoor, Vehicle, Banners).
-            </p>
-        </section>
-
-        <section class="mb-12 border-t border-gray-950 pt-8">
-            <h2 class="text-2xl font-bold mb-6 text-lime-400">Vertical-Level Optimization</h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="bg-gray-900/30 p-6 rounded-lg border border-gray-800">
-                    <h3 class="font-bold text-white mb-2">Indoor Signage Vertical</h3>
-                    <p class="text-xs text-gray-400 mb-4 italic">Intent: Office branding & ADA compliance.</p>
-                    <ul class="text-xs text-gray-500 space-y-2">
-                        <li>• <strong class="text-gray-300">Target:</strong> ADA signage, lobby graphics, wayfinding.</li>
-                        <li>• <strong class="text-gray-300">SEO Signal:</strong> Title/H1 aligned with Vancouver, WA compliance searches.</li>
-                    </ul>
-                </div>
-                <div class="bg-gray-900/30 p-6 rounded-lg border border-gray-800">
-                    <h3 class="font-bold text-white mb-2">Outdoor Signage Vertical</h3>
-                    <p class="text-xs text-gray-400 mb-4 italic">Intent: High-visibility & durability.</p>
-                    <ul class="text-xs text-gray-500 space-y-2">
-                        <li>• <strong class="text-gray-300">Target:</strong> Monument signs, LED boards, pylon signs.</li>
-                        <li>• <strong class="text-gray-300">SEO Signal:</strong> Focused on weather-resistance and local permitting support.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section class="mb-12 border-t border-gray-950 pt-8">
-            <h2 class="text-2xl font-bold mb-6 text-lime-400">Visualizing the New Sitemap</h2>
+<section class="mb-12 border-t border-gray-950 pt-8">
+            <h2 class="text-2xl font-bold mb-6 text-lime-400">The Structural Taxonomy</h2>
             <p class="text-sm text-gray-400 mb-6 leading-relaxed">
-                I restructured the internal linking to follow a clean, hierarchical flow. This ensures search engines can crawl the "Industry" and "Location" hubs—two high-value areas previously missing from the site’s architecture.
+                The primary goal of the new IA was to eliminate "dead-end" navigation and ensure that every sub-service had a clear parent vertical. This structure maximizes topical authority while providing a clear path for the Google crawler to understand service relationships.
             </p>
             
-            <div class="bg-gray-950 p-6 rounded-xl border border-gray-800 font-mono text-[10px] text-gray-500 leading-tight">
-                <div class="text-lime-400 font-bold mb-2">Main Navigation Hub</div>
-                <div class="pl-4 border-l border-gray-800">
-                    <div class="mb-2">Services (Parent)</div>
-                    <div class="pl-4 border-l border-gray-800">
-                        <div class="text-gray-300 mb-1">↳ Indoor Signs (ADA, Lobby, Wall Graphics)</div>
-                        <div class="text-gray-300 mb-1">↳ Outdoor Signs (Monument, Pylon, LED)</div>
-                        <div class="text-gray-300 mb-1">↳ Vehicle Wraps (Fleet, Boat, Van)</div>
-                        <div class="text-gray-300 mb-1">↳ Banners (Event, Trade Show, Retractable)</div>
+            <div class="bg-gray-950 p-8 rounded-xl border border-gray-800 font-mono text-[11px] md:text-xs text-gray-500 leading-relaxed overflow-x-auto">
+                <div class="text-lime-400 font-bold mb-4">// PROPOSED SITE ARCHITECTURE (INTENT-MAPPED)</div>
+                
+                <div class="space-y-4">
+                    <div>
+                        <span class="text-white font-bold">Main Navigation Hub</span>
+                        <div class="pl-4 border-l border-gray-800 ml-2 mt-2 space-y-4">
+                            
+                            <div>
+                                <span class="text-lime-500/80">↳ Services (Dynamic Mega-Menu)</span>
+                                <div class="pl-6 border-l border-gray-800 ml-2 mt-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <ul class="space-y-1">
+                                        <li class="text-gray-300 font-bold">Indoor Signs</li>
+                                        <li class="pl-4">↳ Business & Lobby</li>
+                                        <li class="pl-4">↳ Electronic / Digital</li>
+                                        <li class="pl-4">↳ Directional & ADA</li>
+                                        <li class="pl-4">↳ Wallcovering & Murals</li>
+                                        <li class="pl-4">↳ Window Graphics</li>
+                                        <li class="pl-4">↳ Magnetic Door Signs</li>
+                                    </ul>
+                                    <ul class="space-y-1">
+                                        <li class="text-gray-300 font-bold">Outdoor Signs</li>
+                                        <li class="pl-4">↳ Business & Exterior</li>
+                                        <li class="pl-4">↳ Electronic Message Centers</li>
+                                        <li class="pl-4">↳ Monument & Pylon</li>
+                                        <li class="pl-4">↳ Wallcoverings & Murals</li>
+                                        <li class="pl-4">↳ Yard & Temporary</li>
+                                    </ul>
+                                    <ul class="space-y-1">
+                                        <li class="text-gray-300 font-bold">Vehicle Wraps</li>
+                                        <li class="pl-4">↳ SUV / Car Wraps</li>
+                                        <li class="pl-4">↳ Boat / Marine</li>
+                                        <li class="pl-4">↳ Fleet Graphics</li>
+                                        <li class="pl-4">↳ Box Trucks & Trailers</li>
+                                        <li class="pl-4">↳ Vinyl Decals</li>
+                                    </ul>
+                                    <ul class="space-y-1">
+                                        <li class="text-gray-300 font-bold">Banners</li>
+                                        <li class="pl-4">↳ Event & Promotional</li>
+                                        <li class="pl-4">↳ Pole & Street</li>
+                                        <li class="pl-4">↳ Sports & Sponsor</li>
+                                        <li class="pl-4">↳ Wall & Fence</li>
+                                        <li class="pl-4">↳ Retractable Stands</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="space-y-2">
+                                <div class="text-lime-500/80">↳ Industries (Authority Hub)</div>
+                                <div class="pl-6 border-l border-gray-800 ml-2 text-gray-400">
+                                    Retail, Healthcare, Corporate, Education, Hospitality
+                                </div>
+                                
+                                <div class="text-lime-500/80">↳ Locations (GEO Hub)</div>
+                                <div class="pl-6 border-l border-gray-800 ml-2 text-gray-400">
+                                    Vancouver WA, Portland OR, Camas, Ridgefield
+                                </div>
+                            </div>
+
+                            <div class="text-gray-600">
+                                ↳ About Us / Blog / Testimonials / FAQs
+                            </div>
+
+                            <div class="text-white font-bold bg-lime-400/10 px-2 py-1 rounded inline-block">
+                                ↳ PRIMARY CTA: Request Estimate / Free Quote
+                            </div>
+                        </div>
                     </div>
-                    <div class="mt-4 text-lime-500 font-bold">↳ NEW: Industries Vertical (Healthcare, Retail, Education)</div>
-                    <div class="mt-1 text-lime-500 font-bold">↳ NEW: Locations Hub (Vancouver, WA / Portland, OR)</div>
                 </div>
             </div>
         </section>
-
-        <section class="border-t border-gray-950 pt-8 pb-12">
-            <h2 class="text-2xl font-bold mb-4 text-lime-400">The Outcome: Lead-Gen Efficiency</h2>
-            <p class="text-gray-300 leading-relaxed mb-6">
-                By defining one core intent per page and aligning the title tags, H1s, and Above-the-Fold messaging, we created a seamless path for users. More importantly, we identified a <strong>significant gap in local search visibility</strong>.
-            </p>
-            <div class="bg-lime-400/5 border border-lime-400/20 rounded-xl p-6">
-                <h3 class="font-bold text-white mb-2">Strategic "Added Value" Discovery</h3>
-                <p class="text-sm text-gray-400 leading-relaxed">
-                    Historically, the client lacked 'Location' and 'Industries' pages. My blueprint introduced these new verticals to capture specific market sectors (e.g., "Signage for Healthcare") and localized search intent (e.g., "Signs in Portland"). This expansion didn't just fix the current site; it provided a roadmap for sustainable, scalable growth.
-                </p>
-            </div>
-        </section>
-    </div>
-</body>
-</html>
