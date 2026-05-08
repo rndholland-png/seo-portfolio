@@ -18,7 +18,7 @@
         <header class="mb-12">
             <span class="text-xs font-bold tracking-widest text-lime-400 uppercase bg-lime-400/10 px-3 py-1 rounded-full">LLM Retrieval & GEO</span>
             <h1 class="text-5xl font-bold mt-4 mb-4">Programmatic Query Fanout</h1>
-            <p class="text-xl text-gray-400">Leveraging Python and the Gemini API to map search-intent clusters for AI Overviews.</p>
+            <p class="text-xl text-gray-400">Leveraging Python and the Gemini 3 API to map search-intent clusters for AI Overviews.</p>
         </header>
 
         <section class="mb-12">
@@ -27,7 +27,7 @@
                 Modern search engine optimization has moved past single keyword targets. With the rise of AI Overviews, searchers use complex, long-tail, and highly conversational prompts. To capture this traffic, websites must prove dense **topical authority** across an entire semantic network.
             </p>
             <p class="text-gray-300 leading-relaxed">
-                Using **Google Colab, Python, and the Gemini API (via Google AI Studio)**, I built a programmatic **Query Fanout Tool**. Tested for a local specialized clinic, <em>Hazelwood Healthcare</em>, this tool scales a handful of primary service offerings (such as Cox Technic, contrast therapy, and cold plunge) into a comprehensive web of intent-based queries. This allows us to map exactly what competitors are ranking for in AI engines and build content that answers conversational search.
+                Using **Google Colab, Python, and the Gemini 3 API (via Google AI Studio)**, I built a programmatic **Query Fanout Tool**. Tested on a specialized multi-disciplinary clinic (represented here as <em>Apex Spine & Wellness</em>), this tool scales a handful of primary service offerings (such as Cox Technic, contrast therapy, and cold plunge) into a comprehensive web of intent-based queries. This allows us to map exactly what competitors are ranking for in AI engines and build content that answers conversational search.
             </p>
         </section>
 
@@ -72,18 +72,21 @@
         </section>
 
         <section class="mb-12 border-t border-gray-950 pt-8">
-            <h2 class="text-2xl font-bold mb-4 text-lime-400">The Execution: Google Colab & Gemini API</h2>
+            <h2 class="text-2xl font-bold mb-4 text-lime-400">The Execution: Google Colab & Gemini 3 API</h2>
             <p class="text-gray-300 leading-relaxed mb-6">
-                Below is a structured look at the core logic built in Google Colab. The script feeds seed concepts to the Gemini API, requesting structural JSON-LD structured query maps categorized by search intent stages.
+                Below is a structured look at the core logic built in Google Colab. The script feeds seed concepts to the Gemini 3 API, requesting structural JSON-LD query maps categorized by search intent stages.
             </p>
 
             <div class="bg-gray-950 border border-gray-800 rounded-xl p-6 font-mono text-xs overflow-x-auto text-gray-400">
-                <span class="text-gray-600 block mb-3">// Google Colab Query Fanout Prototype</span>
+                <span class="text-gray-600 block mb-3">// Google Colab Query Fanout Prototype (Gemini 3 API)</span>
                 <span class="text-blue-400">import</span> google.generativeai <span class="text-blue-400">as</span> genai<br>
                 <span class="text-blue-400">import</span> json<br><br>
 
-                genai.configure(api_key=dbutils.secrets.get(path=<span class="text-lime-300">"GEMINI_API_KEY"</span>))<br>
-                model = genai.GenerativeModel(<span class="text-lime-300">'gemini-1.5-flash'</span>)<br><br>
+                <span class="text-gray-600"># Configure using your secure Google AI Studio API Key</span><br>
+                genai.configure(api_key=dbutils.secrets.get(path=<span class="text-lime-300">"GEMINI_API_KEY"</span>))<br><br>
+
+                <span class="text-gray-600"># Utilizing the latest Gemini 3 Flash model optimized for speed & structured JSON output</span><br>
+                model = genai.GenerativeModel(<span class="text-lime-300">'gemini-3.1-flash'</span>)<br><br>
 
                 prompt = <span class="text-lime-300">"""<br>
                 Act as an advanced semantic search engineer. Fan out the following seed concepts <br>
