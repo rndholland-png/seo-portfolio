@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programmatic Query Fanout & LLM Alignment | Randy Holland</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { font-family: 'Urbanist', sans-serif; background-color: #0a0a0a; color: #ffffff; }
+    </style>
+</head>
+<body class="p-8">
+    <div class="max-w-4xl mx-auto">
+        <a href="automation.html" class="text-lime-400 hover:text-white transition-colors mb-8 inline-block">← Back to Automation Lab</a>
+        
+        <header class="mb-12">
+            <span class="text-xs font-bold tracking-widest text-lime-400 uppercase bg-lime-400/10 px-3 py-1 rounded-full">LLM Retrieval & GEO</span>
+            <h1 class="text-5xl font-bold mt-4 mb-4">Programmatic Query Fanout</h1>
+            <p class="text-xl text-gray-400">Leveraging Python and the Gemini API to map search-intent clusters for AI Overviews.</p>
+        </header>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4 text-lime-400">The SGE & AI Overview Shift</h2>
+            <p class="text-gray-300 leading-relaxed mb-6">
+                Modern search engine optimization has moved past single keyword targets. With the rise of AI Overviews, searchers use complex, long-tail, and highly conversational prompts. To capture this traffic, websites must prove dense **topical authority** across an entire semantic network.
+            </p>
+            <p class="text-gray-300 leading-relaxed">
+                Using **Google Colab, Python, and the Gemini API (via Google AI Studio)**, I built a programmatic **Query Fanout Tool**. Tested for a local specialized clinic, <em>Hazelwood Healthcare</em>, this tool scales a handful of primary service offerings (such as Cox Technic, contrast therapy, and cold plunge) into a comprehensive web of intent-based queries. This allows us to map exactly what competitors are ranking for in AI engines and build content that answers conversational search.
+            </p>
+        </section>
+
+        <section class="mb-12 border-t border-gray-950 pt-8">
+            <h2 class="text-2xl font-bold mb-2 text-lime-400">Visualizing the Programmatic Fanout</h2>
+            <p class="text-sm text-gray-500 mb-6 font-mono">Conceptual model: Scaling 1 Seed keyword into 3 distinct user-intent layers.</p>
+            
+            <div class="bg-gray-900/10 border border-gray-800 rounded-xl p-8">
+                <div class="flex justify-center mb-8">
+                    <div class="bg-lime-400 text-gray-950 px-6 py-3 rounded-lg font-bold shadow-[0_0_15px_rgba(163,230,53,0.2)] text-center">
+                        <span class="text-[10px] uppercase tracking-widest block text-gray-950/70 font-semibold mb-1">Seed Keyword</span>
+                        Cox Technic Spinal Decompression
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div class="bg-gray-950/60 border border-gray-800 p-5 rounded-lg">
+                        <span class="text-xs font-bold text-lime-400 uppercase tracking-wider block mb-2"><i class="fa-solid fa-circle-question mr-1.5"></i> Informational / Comparison</span>
+                        <ul class="text-xs text-gray-400 space-y-2 font-mono">
+                            <li>• How does Cox Technic compare to traditional spinal manipulation?</li>
+                            <li>• Is Cox flexion distraction safe for herniated discs?</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-950/60 border border-gray-800 p-5 rounded-lg">
+                        <span class="text-xs font-bold text-lime-400 uppercase tracking-wider block mb-2"><i class="fa-solid fa-location-dot mr-1.5"></i> Hyper-Local GEO Intent</span>
+                        <ul class="text-xs text-gray-400 space-y-2 font-mono">
+                            <li>• Chiropractors certified in Cox Technic Portland OR</li>
+                            <li>• Where to get flexion distraction therapy near East Portland</li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-gray-950/60 border border-gray-800 p-5 rounded-lg">
+                        <span class="text-xs font-bold text-lime-400 uppercase tracking-wider block mb-2"><i class="fa-solid fa-heart-pulse mr-1.5"></i> Symptomatic / Experiential</span>
+                        <ul class="text-xs text-gray-400 space-y-2 font-mono">
+                            <li>• What to expect during first Cox Technic decompression session</li>
+                            <li>• Chiropractic treatment protocols for lumbar stenosis pain</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12 border-t border-gray-950 pt-8">
+            <h2 class="text-2xl font-bold mb-4 text-lime-400">The Execution: Google Colab & Gemini API</h2>
+            <p class="text-gray-300 leading-relaxed mb-6">
+                Below is a structured look at the core logic built in Google Colab. The script feeds seed concepts to the Gemini API, requesting structural JSON-LD structured query maps categorized by search intent stages.
+            </p>
+
+            <div class="bg-gray-950 border border-gray-800 rounded-xl p-6 font-mono text-xs overflow-x-auto text-gray-400">
+                <span class="text-gray-600 block mb-3">// Google Colab Query Fanout Prototype</span>
+                <span class="text-blue-400">import</span> google.generativeai <span class="text-blue-400">as</span> genai<br>
+                <span class="text-blue-400">import</span> json<br><br>
+
+                genai.configure(api_key=dbutils.secrets.get(path=<span class="text-lime-300">"GEMINI_API_KEY"</span>))<br>
+                model = genai.GenerativeModel(<span class="text-lime-300">'gemini-1.5-flash'</span>)<br><br>
+
+                prompt = <span class="text-lime-300">"""<br>
+                Act as an advanced semantic search engineer. Fan out the following seed concepts <br>
+                into highly distinct conversational, symptomatic, and hyper-local long-tail queries <br>
+                suitable for mapping topical authority gaps.<br>
+                <br>
+                Seed Concept: "Cox Technic chiropractic decompression"<br>
+                Respond strictly in JSON format matching this schema:<br>
+                { "informational": [], "geo_intent": [], "symptom_focused": [] }<br>
+                """</span><br><br>
+
+                response = model.generate_content(prompt)<br>
+                query_map = json.loads(response.text)<br>
+                print(json.dumps(query_map, indent=2))
+            </div>
+        </section>
+
+        <section class="border-t border-gray-950 pt-8 pb-12">
+            <h2 class="text-2xl font-bold mb-4 text-lime-400">The Operational Impact</h2>
+            <p class="text-gray-300 leading-relaxed mb-6">
+                Instead of conducting manual, time-consuming keyword research on tools that rely on historical databases (which are often weeks or months out of date), this programmatic workflow generates real-time, LLM-aligned topical networks in under 60 seconds.
+            </p>
+            <div class="bg-lime-400/5 border border-lime-400/20 rounded-xl p-6">
+                <h3 class="font-bold text-white mb-2 flex items-center">
+                    <span class="text-lime-400 mr-2">✓</span> Ready for the AI Search Landscape
+                </h3>
+                <p class="text-sm text-gray-400 leading-relaxed">
+                    By feeding these programmatic intents directly into the creative briefs (via <strong>The SEO Grid</strong>), we ensured that the client’s site naturally acquired organic context references used by AI engines. This system builds the precise semantic architecture required to earn citations in AI Overviews, transforming raw code into direct customer acquisition.
+                </p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
