@@ -5,16 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enterprise eCommerce SEO Blueprint (Wayfair Case Study) | Randy Holland</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght=400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
         body { font-family: 'Urbanist', sans-serif; background-color: #0a0a0a; color: #ffffff; }
-        .slide { display: none; }
-        .slide.active { display: block; }
     </style>
 </head>
 <body class="p-8">
-    <div class="max-w-6xl mx-auto">
+    <div class="max-w-5xl mx-auto">
         <a href="strategy.html" class="text-lime-400 hover:text-white transition-colors mb-8 inline-block">← Back to Strategy Lab</a>
         
         <header class="mb-12">
@@ -33,133 +31,21 @@
         </section>
 
         <section class="mb-12 border-t border-gray-950 pt-8">
-            <div class="flex justify-between items-center mb-6">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
                 <h2 class="text-2xl font-bold text-lime-400 flex items-center">
-                    <i class="fa-solid fa-presentation-screen mr-3"></i> Interactive Pitch Deck & Notes
+                    <i class="fa-solid fa-presentation-screen mr-3"></i> Strategy Pitch Deck
                 </h2>
                 <a href="wayfair-deck.pdf" target="_blank" class="text-xs font-bold text-lime-400 hover:text-white bg-lime-400/10 border border-lime-400/20 px-4 py-2 rounded-lg transition-all flex items-center gap-2">
-                    <i class="fa-solid fa-download"></i> Download PDF Deck
+                    <i class="fa-solid fa-download"></i> Download Full PDF Deck
                 </a>
             </div>
 
-            <div class="grid lg:grid-cols-12 gap-8">
-                
-                <div class="lg:col-span-7 bg-gray-950 border border-gray-800 rounded-2xl overflow-hidden shadow-2xl h-[500px]">
-                    <iframe 
-                        src="wayfair-deck.pdf" 
-                        class="w-full h-full border-none"
-                        title="Wayfair SEO Strategy Pitch Deck">
-                    </iframe>
-                </div>
-
-                <div class="lg:col-span-5 bg-gray-950 border border-gray-800 rounded-2xl overflow-hidden shadow-2xl flex flex-col justify-between h-[500px]">
-                    <div class="p-6 md:p-8 flex-grow overflow-y-auto">
-                        
-                        <div id="slide-1" class="slide active">
-                            <div class="flex justify-between items-center mb-4">
-                                <span class="text-xs font-bold uppercase tracking-wider text-lime-400 bg-lime-400/10 px-2.5 py-1 rounded-full">Slide 1: Market Context</span>
-                                <span class="font-mono text-xs text-gray-500">01 / 05</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-3">Re-Establishing the Organic Growth Engine</h3>
-                            <p class="text-xs text-gray-400 leading-relaxed mb-4">
-                                Addressing Wayfair's post-2022 organic traffic correction by looking past temporary post-pandemic normalization. This phase establishes a resilient, evergreen channel built to weather search landscape shifts and Google's Helpful Content framework.
-                            </p>
-                            <div class="border-l-2 border-lime-400/30 pl-4 py-1 text-xs text-gray-500 italic">
-                                Core Goal: Elevating the brand from raw transactional keyword volume-chasing models to a high-trust, authoritative semantic network.
-                            </div>
-                        </div>
-
-                        <div id="slide-2" class="slide">
-                            <div class="flex justify-between items-center mb-4">
-                                <span class="text-xs font-bold uppercase tracking-wider text-lime-400 bg-lime-400/10 px-2.5 py-1 rounded-full">Slide 2: Strategic Pillars</span>
-                                <span class="font-mono text-xs text-gray-500">02 / 05</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-3">The 30,000-Foot Opportunity Matrix</h3>
-                            <p class="text-xs text-gray-400 leading-relaxed mb-4">
-                                To win in crowded SERPs, Wayfair must dominate the entire user search journey. Our strategy focuses on three core pillars:
-                            </p>
-                            <div class="space-y-2 text-[11px]">
-                                <div class="bg-gray-900/40 p-2.5 rounded border border-gray-900">
-                                    <strong class="text-lime-400 block">01. Technical Excellence</strong>
-                                    Optimizing crawling/indexing at scale while stripping mobile JS bloat.
-                                </div>
-                                <div class="bg-gray-900/40 p-2.5 rounded border border-gray-900">
-                                    <strong class="text-lime-400 block">02. Content Authority</strong>
-                                    Leveraging design-focused SMEs and building comprehensive Quality Guides.
-                                </div>
-                                <div class="bg-gray-900/40 p-2.5 rounded border border-gray-900">
-                                    <strong class="text-lime-400 block">03. Clicks to Conversions</strong>
-                                    Bridging on-page ranking data with GA4 product funnel revenue attribution.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="slide-3" class="slide">
-                            <div class="flex justify-between items-center mb-4">
-                                <span class="text-xs font-bold uppercase tracking-wider text-lime-400 bg-lime-400/10 px-2.5 py-1 rounded-full">Slide 3: Technical</span>
-                                <span class="font-mono text-xs text-gray-500">03 / 05</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-3">Technical Foundation & Mobile CWV</h3>
-                            <p class="text-xs text-gray-400 leading-relaxed mb-4">
-                                Large-scale eCommerce platforms live or die by their crawling efficiency. Addressing heavy client-side JavaScript execution models on mobile viewports improves Core Web Vitals (LCP/TBT) and unlocks indexation limits.
-                            </p>
-                            <div class="font-mono text-[10px] bg-black p-3 rounded border border-gray-900 text-gray-500 space-y-1">
-                                <div class="text-lime-400">// STRATEGIC TACTICS:</div>
-                                <div>• Streamline nesting paths to prevent URL link dilution</div>
-                                <div>• Implement aggressive deferred loading rules for non-critical JS</div>
-                                <div>• Broaden Product & Breadcrumb schema mappings across layers</div>
-                            </div>
-                        </div>
-
-                        <div id="slide-4" class="slide">
-                            <div class="flex justify-between items-center mb-4">
-                                <span class="text-xs font-bold uppercase tracking-wider text-lime-400 bg-lime-400/10 px-2.5 py-1 rounded-full">Slide 4: Authority</span>
-                                <span class="font-mono text-xs text-gray-500">04 / 05</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-3">E-E-A-T & Verifiable Author Networks</h3>
-                            <p class="text-xs text-gray-400 leading-relaxed mb-4">
-                                Transitioning informational content into robust, citation-grade assets. By assigning verifiable author profile pages to internal interior designers and merchants, we satisfy search engines' need for expert-led content.
-                            </p>
-                            <div class="bg-lime-950/10 border border-lime-900/20 p-3 rounded text-[11px] text-gray-400">
-                                <strong class="text-lime-400">The Above-the-Fold Shift:</strong> Migrating SEO-rich contextual copy from category page footers to prominent above-the-fold interface modules, serving user research intent instantly.
-                            </div>
-                        </div>
-
-                        <div id="slide-5" class="slide">
-                            <div class="flex justify-between items-center mb-4">
-                                <span class="text-xs font-bold uppercase tracking-wider text-lime-400 bg-lime-400/10 px-2.5 py-1 rounded-full">Slide 5: CRO & Revenue</span>
-                                <span class="font-mono text-xs text-gray-500">05 / 05</span>
-                            </div>
-                            <h3 class="text-xl font-bold text-white mb-3">Transforming Clicks into Capital</h3>
-                            <p class="text-xs text-gray-400 leading-relaxed mb-4">
-                                SEO doesn't stop at visibility. By connecting organic traffic loops with A/B layout testing and full-funnel CRO metrics, we tie organic actions straight to business profitability.
-                            </p>
-                            <div class="grid grid-cols-3 gap-1.5 text-center text-[9px] font-mono font-bold text-lime-400">
-                                <div class="bg-gray-900/50 p-2 rounded border border-gray-900">Organic Revenue / AOV</div>
-                                <div class="bg-gray-900/50 p-2 rounded border border-gray-900">Category Conv. Rate</div>
-                                <div class="bg-gray-900/50 p-2 rounded border border-gray-900">Visibility to CTR Trend</div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="bg-gray-900/40 px-6 py-3 border-t border-gray-900 flex justify-between items-center shrink-0">
-                        <button id="prev-btn" onclick="changeSlide(-1)" class="text-[11px] font-bold text-gray-500 hover:text-white transition-colors flex items-center gap-1.5">
-                            <i class="fa-solid fa-arrow-left"></i> Prev
-                        </button>
-                        <div class="flex gap-1.5">
-                            <span class="dot h-1.5 w-1.5 rounded-full bg-lime-400"></span>
-                            <span class="dot h-1.5 w-1.5 rounded-full bg-gray-700"></span>
-                            <span class="dot h-1.5 w-1.5 rounded-full bg-gray-700"></span>
-                            <span class="dot h-1.5 w-1.5 rounded-full bg-gray-700"></span>
-                            <span class="dot h-1.5 w-1.5 rounded-full bg-gray-700"></span>
-                        </div>
-                        <button id="next-btn" onclick="changeSlide(1)" class="text-[11px] font-bold text-lime-400 hover:text-white transition-colors flex items-center gap-1.5">
-                            Next <i class="fa-solid fa-arrow-right"></i>
-                        </button>
-                    </div>
-                </div>
-
+            <div class="w-full bg-gray-950 border border-gray-800 rounded-2xl overflow-hidden shadow-2xl h-[650px]">
+                <iframe 
+                    src="wayfair-deck.pdf#toolbar=0&navpanes=0" 
+                    class="w-full h-full border-none"
+                    title="Wayfair SEO Strategy Pitch Deck">
+                </iframe>
             </div>
         </section>
 
@@ -170,31 +56,5 @@
             </p>
         </section>
     </div>
-
-    <script>
-        let currentSlide = 1;
-        const totalSlides = 5;
-
-        function changeSlide(direction) {
-            document.getElementById(`slide-${currentSlide}`).classList.remove('active');
-            
-            currentSlide += direction;
-            if (currentSlide > totalSlides) currentSlide = 1;
-            if (currentSlide < 1) currentSlide = totalSlides;
-            
-            document.getElementById(`slide-${currentSlide}`).classList.add('active');
-            
-            const dots = document.querySelectorAll('.dot');
-            dots.forEach((dot, index) => {
-                if (index === currentSlide - 1) {
-                    dot.classList.remove('bg-gray-700');
-                    dot.classList.add('bg-lime-400');
-                } else {
-                    dot.classList.remove('bg-lime-400');
-                    dot.classList.add('bg-gray-700');
-                }
-            });
-        }
-    </script>
 </body>
 </html>
