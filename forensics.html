@@ -11,40 +11,190 @@
         body { font-family: 'Urbanist', sans-serif; background-color: #0a0a0a; color: #ffffff; }
     </style>
 </head>
-<body class="p-8">
-    <div class="max-w-6xl mx-auto">
-        <a href="index.html" class="text-lime-400 hover:text-white transition-colors mb-8 inline-block">← Back to Main Hub</a>
+<body class="p-8 min-h-screen flex flex-col justify-between">
+    <div class="max-w-6xl mx-auto w-full">
         
-        <header class="mb-12">
-            <h1 class="text-5xl font-bold mb-4">Technical Forensics Lab</h1>
-            <p class="text-xl text-gray-400">Surgical diagnostics, infrastructure migrations, and semantic architectures engineered to protect and scale enterprise search equity.</p>
+        <!-- Navigation Header -->
+        <header class="mb-12 mt-8">
+            <a href="index.html" class="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-lime-400 uppercase bg-lime-400/10 px-4 py-2 rounded-full hover:bg-lime-400/20 transition-all mb-6">
+                <i class="fa-solid fa-arrow-left"></i> Return to Hub
+            </a>
+            <h1 class="text-4xl md:text-5xl font-bold tracking-tight mt-2">Technical Forensics Lab</h1>
+            <p class="text-lg text-gray-400 mt-2 max-w-2xl">
+                Deconstructing indexation loops, server misconfigurations, and deep crawl anomalies.
+            </p>
+            <div class="h-[1px] w-full bg-gradient-to-r from-lime-400/30 to-transparent mt-8"></div>
         </header>
 
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="border border-gray-800 p-6 rounded-lg hover:border-lime-400 transition-all bg-gray-900/20 flex flex-col justify-between">
-                <div>
-                    <h3 class="text-xl font-bold mb-2 text-lime-400">Orca Security Migration</h3>
-                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">Surgically restoring link equity and indexation safety flags within a 1-week post-launch window in collaboration with the Web Dev Team.</p>
-                </div>
-                <a href="orca-migration.html" class="inline-block text-white font-semibold border-b border-lime-400 pb-1 self-start hover:text-lime-400 transition-colors">View Full Breakdown →</a>
+        <!-- Main Content Area -->
+        <main class="grid lg:grid-cols-3 gap-12 items-start mb-16">
+            
+            <!-- Left/Main Column: Case Study Narrative -->
+            <div class="lg:col-span-2 space-y-12">
+                
+                <!-- Project Intro -->
+                <section>
+                    <span class="text-xs font-bold text-lime-400 uppercase tracking-widest">Case Study</span>
+                    <h2 class="text-3xl font-bold mt-2 mb-4 text-white">The 921K Phantom Page Crawl Loop</h2>
+                    <p class="text-gray-400 leading-relaxed mb-6">
+                        How an aggressive firewall band-aid coupled with an unmanaged e-commerce inventory sync generated nearly a million duplicate URLs—wasting 99.9% of a regional enterprise's crawl budget and blinding search engine spiders to core commercial service pages.
+                    </p>
+                </section>
+
+                <!-- High-Impact Key Performance Indicators -->
+                <section class="grid grid-cols-2 gap-4">
+                    <div class="border border-gray-800 p-6 rounded-xl bg-gray-900/10">
+                        <span class="text-xs text-gray-500 uppercase tracking-wider block">Discovered Waste</span>
+                        <span class="text-3xl md:text-4xl font-bold text-lime-400 block mt-1">921,000+</span>
+                        <span class="text-xs text-gray-400 mt-1 block">Rogue Inventory URLs</span>
+                    </div>
+                    <div class="border border-gray-800 p-6 rounded-xl bg-gray-900/10">
+                        <span class="text-xs text-gray-500 uppercase tracking-wider block">Crawl Optimization</span>
+                        <span class="text-3xl md:text-4xl font-bold text-lime-400 block mt-1">99.9%</span>
+                        <span class="text-xs text-gray-400 mt-1 block">Crawl Budget Reclaimed</span>
+                    </div>
+                </section>
+
+                <!-- Section 1: Discovery -->
+                <section class="space-y-4">
+                    <h3 class="text-xl font-bold text-white border-b border-gray-800 pb-2 flex items-center gap-2">
+                        <span class="text-lime-400 text-sm">01/</span> The Discovery & Diagnostic Red Flags
+                    </h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        During a technical infrastructure audit for Pacific Fence & Wire Co., a localized regional contractor, I discovered a dramatic indexation bottleneck in Google Search Console. A site that required fewer than 100 high-value intent pages to address its market footprint was reporting an index footprint of nearly a million URLs flagged as <code class="text-lime-400 bg-lime-400/5 px-1.5 py-0.5 rounded text-xs">Crawled - currently not indexed</code>.
+                    </p>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        All target URLs followed a systemic database pattern: <code class="text-gray-300">/items/[SKU-ID]/</code>. Google was dedicating its daily resource limits to crawling a digital wilderness, completely ignoring the primary, commercial localized categories driving immediate business line revenue.
+                    </p>
+                </section>
+
+                <!-- Section 2: Forensics -->
+                <section class="space-y-4">
+                    <h3 class="text-xl font-bold text-white border-b border-gray-800 pb-2 flex items-center gap-2">
+                        <span class="text-lime-400 text-sm">02/</span> The Forensics & Infrastructure Breakdown
+                    </h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        To uncover how Google discovered these URLs without an explicit sitemap directive, I initiated deep URL inspection routines. Testing paths via a standard browser yielded an immediate edge routing blockade:
+                    </p>
+                    
+                    <!-- Blockquote Mockup -->
+                    <div class="border-l-2 border-lime-400 bg-gray-900/20 p-4 rounded-r-lg text-sm text-gray-400 italic">
+                        <strong>Cloudflare WAF Error Response:</strong> "Attention Required! Sorry, you have been blocked. This website is using a security service to protect itself from online attacks."
+                    </div>
+
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Cross-referencing this against Google Search Console's Live Inspection Tool confirmed an asset fetching breakdown: <code class="text-red-400 bg-red-400/5 px-1.5 py-0.5 rounded text-xs">Failed: Blocked due to access forbidden (403)</code>. This contradiction surfaced a classic technical architecture disconnect:
+                    </p>
+                    
+                    <ul class="list-none space-y-3 pl-2 text-sm text-gray-400">
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-nodes text-lime-400 mt-1 text-xs"></i>
+                            <span><strong>The Verified Bot Loophole:</strong> Cloudflare's perimeter engine naturally passed standard Googlebot verification tests, granting the crawler uninterrupted access to the raw directory paths.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-nodes text-lime-400 mt-1 text-xs"></i>
+                            <span><strong>The Inventory Leak:</strong> A backend WooCommerce ERP migration or dynamic catalog archive was actively outputting individual template views for internal inventory item IDs, publishing them directly to the frontend DOM.</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fa-solid fa-circle-nodes text-lime-400 mt-1 text-xs"></i>
+                            <span><strong>The 403 Crawl Trap:</strong> Because edge-security issued a 403 Forbidden server code rather than a permanent 404/410, Google viewed the barrier as a transient server permissions fault. Instead of dropping the paths, it kept trying to crawl them over and over.</span>
+                        </li>
+                    </ul>
+                </section>
+
+                <!-- Section 3: The Triage -->
+                <section class="space-y-4">
+                    <h3 class="text-xl font-bold text-white border-b border-gray-800 pb-2 flex items-center gap-2">
+                        <span class="text-lime-400 text-sm">03/</span> Triage & Engineering Implementation
+                    </h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Because dealing with nearly a million URLs across standard search engine schedules can take months via natural discovery, I implemented a immediate root-level block to isolate and reclaim the site's crawl budget.
+                    </p>
+                    
+                    <p class="text-gray-400 text-sm font-semibold mt-4">Step 1: Immediate Directory Isolation via robots.txt</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        I targeted the crawler behavior directly at the root layer, cutting off access before the request could hit the Cloudflare engine:
+                    </p>
+
+                    <!-- Code block -->
+                    <div class="bg-black/40 border border-gray-800 p-4 rounded-xl font-mono text-xs text-lime-400 space-y-1 shadow-inner">
+                        <p class="text-gray-600"># Intercept and isolate infinite inventory loop</p>
+                        <p><span class="text-white">User-agent:</span> *</p>
+                        <p><span class="text-white">Disallow:</span> /items/</p>
+                    </div>
+
+                    <p class="text-gray-400 text-sm font-semibold mt-6">Step 2: Developer Hand-Off Strategy</p>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        I authored an execution brief for the engineering team to remove the reliance on firewall blocks and introduce a clean architectural close:
+                    </p>
+                    <ul class="list-disc pl-6 text-sm text-gray-400 space-y-1">
+                        <li><strong>DOM Review:</strong> Identify the template scripts generating raw database strings as navigable elements on public-facing layouts.</li>
+                        <li><strong>Header Migration:</strong> Convert the edge routing Cloudflare block response from a 403 Forbidden over to an explicit **404 Not Found** or **410 Gone** status across all `/items/` directories, forcing Google to permanently erase the records over time.</li>
+                    </ul>
+                </section>
+
             </div>
 
-            <div class="border border-gray-800 p-6 rounded-lg hover:border-lime-400 transition-all bg-gray-900/20 flex flex-col justify-between">
-                <div>
-                    <h3 class="text-xl font-bold mb-2 text-lime-400">JS Rendering Fix</h3>
-                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">Diagnosing client-side rendering bottlenecks to reveal hundreds of hidden pages to Googlebot, resulting in +632% keyword growth.</p>
+            <!-- Right Column: Sticky Metadata Sidebar -->
+            <div class="space-y-6 lg:sticky lg:top-8">
+                <div class="border border-gray-800 p-6 rounded-xl bg-gray-900/5 space-y-6">
+                    <div>
+                        <h4 class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Project Classification</h4>
+                        <span class="inline-block bg-lime-400/10 text-lime-400 text-xs px-2.5 py-1 rounded font-semibold border border-lime-400/20">Crawl Infrastructure</span>
+                    </div>
+                    
+                    <div class="h-[1px] w-full bg-gray-800"></div>
+
+                    <div>
+                        <h4 class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-3">Environmental Stack</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-gray-800 text-gray-300 text-xs px-2.5 py-1 rounded">WordPress</span>
+                            <span class="bg-gray-800 text-gray-300 text-xs px-2.5 py-1 rounded">WooCommerce</span>
+                            <span class="bg-gray-800 text-gray-300 text-xs px-2.5 py-1 rounded">Cloudflare WAF</span>
+                            <span class="bg-gray-800 text-gray-300 text-xs px-2.5 py-1 rounded">Google Search Console</span>
+                        </div>
+                    </div>
+
+                    <div class="h-[1px] w-full bg-gray-800"></div>
+
+                    <div>
+                        <h4 class="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Key Core Competencies</h4>
+                        <ul class="text-xs text-gray-400 space-y-2">
+                            <li class="flex items-center gap-2">
+                                <i class="fa-solid fa-check text-lime-400 text-[10px]"></i> Crawl Budget Restoration
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fa-solid fa-check text-lime-400 text-[10px]"></i> Edge Network Diagnostics
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fa-solid fa-check text-lime-400 text-[10px]"></i> Core Engineering Alignment
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <i class="fa-solid fa-check text-lime-400 text-[10px]"></i> Server Header Analysis
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <a href="medical-coding-case.html" class="inline-block text-white font-semibold border-b border-lime-400 pb-1 self-start hover:text-lime-400 transition-colors">View Full Breakdown →</a>
+                
+                <!-- Secondary back-to-home option -->
+                <a href="index.html" class="block w-full border border-gray-800 hover:border-lime-400/40 p-4 rounded-xl text-center text-sm font-semibold text-gray-400 hover:text-white transition-all bg-gray-900/5">
+                    <i class="fa-solid fa-house text-xs mr-1"></i> Back to Portfolio Overview
+                </a>
             </div>
 
-            <div class="border border-gray-800 p-6 rounded-lg hover:border-lime-400 transition-all bg-gray-900/20 flex flex-col justify-between">
-                <div>
-                    <h3 class="text-xl font-bold mb-2 text-lime-400">Entity Architecture</h3>
-                    <p class="text-gray-400 mb-6 text-sm leading-relaxed">Architecting a linked-data 'Source of Truth' to define brand identity and geographic entities for the Knowledge Graph.</p>
-                </div>
-                <a href="entity-schema-case.html" class="inline-block text-white font-semibold border-b border-lime-400 pb-1 self-start hover:text-lime-400 transition-colors">View Entity Map →</a>
-            </div>
-        </div>
+        </main>
     </div>
+
+    <!-- Footer Area (Mirrors index.html Layout) -->
+    <footer class="max-w-6xl mx-auto w-full border-t border-gray-950 py-8 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-600">
+        <p>© 2026 Randy Holland. Built with Tailwind CSS & GitHub Pages.</p>
+        <div class="flex gap-4 mt-4 sm:mt-0">
+            <a href="https://github.com/rndholland-png" target="_blank" class="hover:text-lime-400 transition-colors">GitHub</a>
+            <span class="text-gray-800">|</span>
+            <a href="https://www.linkedin.com/in/webrandyholland/" target="_blank" class="hover:text-lime-400 transition-colors">LinkedIn</a>
+            <span class="text-gray-800">|</span>
+            <span class="text-gray-500">Vancouver, WA</span>
+        </div>
+    </footer>
 </body>
 </html>
