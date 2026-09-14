@@ -6,6 +6,7 @@
     <title>For Agencies | Randy Holland</title>
     <meta name="description" content="White-label SEO, GEO and AIO fulfillment for agencies in the Portland–Vancouver metro. Technical forensics, AI automation, and AI-search optimization under your brand.">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{colors:{brand:{DEFAULT:'#1E8BCB',light:'#4FB6E0',dark:'#0E2951'}}}}}</script>
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script type="application/ld+json">
@@ -154,11 +155,11 @@
     }
     </script>
     <style>
-        body { font-family: 'Urbanist', sans-serif; background-color: #0a0a0a; color: #ffffff; }
-        .card { background: rgba(17,17,17,.35); }
+        body { font-family: 'Urbanist', sans-serif; background-color: #0A1B30; color: #ffffff; }
+        .card { background: rgba(255,255,255,.04); }
         #rotator { display:inline-block; transition:opacity .35s ease, transform .35s ease; will-change:opacity,transform; }
         #rotator.swap { opacity:0; transform:translateY(-.15em); }
-        @keyframes pulse-dot { 0%{box-shadow:0 0 0 0 rgba(163,230,53,.5)} 70%{box-shadow:0 0 0 8px rgba(163,230,53,0)} 100%{box-shadow:0 0 0 0 rgba(163,230,53,0)} }
+        @keyframes pulse-dot { 0%{box-shadow:0 0 0 0 rgba(30,139,203,.5)} 70%{box-shadow:0 0 0 8px rgba(30,139,203,0)} 100%{box-shadow:0 0 0 0 rgba(30,139,203,0)} }
         .pulse { animation: pulse-dot 2.4s infinite; }
         @media (prefers-reduced-motion: reduce){ .pulse{animation:none} * {transition:none!important} }
     </style>
@@ -168,50 +169,50 @@
 
     <!-- top nav -->
     <nav class="flex items-center justify-between mb-12 mt-2">
-        <a href="index.html" class="text-sm text-gray-400 hover:text-lime-400 transition-colors font-semibold"><i class="fa-solid fa-arrow-left-long mr-2"></i>Portfolio Hub</a>
+        <a href="index.html" class="inline-flex items-center" aria-label="EntityAndSearch home"><span class="bg-white rounded-lg px-2.5 py-1.5 inline-flex"><img src="logo-entityandsearch.png" alt="EntityAndSearch" class="h-9 block"></span></a>
         <div class="flex gap-5 text-sm text-gray-500">
-            <a href="#about" class="hover:text-lime-400 transition-colors hidden sm:inline">About</a>
-            <a href="#model" class="hover:text-lime-400 transition-colors">Model</a>
-            <a href="#work" class="hover:text-lime-400 transition-colors">Capability</a>
-            <a href="#cases" class="hover:text-lime-400 transition-colors">Case files</a>
-            <a href="#rates" class="hover:text-lime-400 transition-colors hidden sm:inline">Rates</a>
+            <a href="#about" class="hover:text-brand transition-colors hidden sm:inline">About</a>
+            <a href="#model" class="hover:text-brand transition-colors">Model</a>
+            <a href="#work" class="hover:text-brand transition-colors">Capability</a>
+            <a href="#cases" class="hover:text-brand transition-colors">Case files</a>
+            <a href="#rates" class="hover:text-brand transition-colors hidden sm:inline">Rates</a>
         </div>
     </nav>
 
     <!-- hero -->
     <header class="mb-16">
-        <span class="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-lime-400 uppercase bg-lime-400/10 px-3 py-1.5 rounded-full">
-            <span class="w-2 h-2 rounded-full bg-lime-400 pulse"></span> Available for white-label partnerships · Vancouver, WA / Portland, OR
+        <span class="inline-flex items-center gap-2 text-xs font-bold tracking-widest text-brand uppercase bg-brand/10 px-3 py-1.5 rounded-full">
+            <span class="w-2 h-2 rounded-full bg-brand pulse"></span> Available for white-label partnerships · Vancouver, WA / Portland, OR
         </span>
         <h1 class="text-4xl md:text-6xl font-extrabold mt-6 mb-5 tracking-tight leading-[1.05] max-w-4xl">
-            Your clients are asking about <span id="rotator" class="text-lime-400">AI search</span>. I'm the specialist you haven't hired yet.
+            Your clients are asking about <span id="rotator" class="text-brand">AI search</span>. I'm the specialist you haven't hired yet.
         </h1>
         <p class="text-lg md:text-2xl text-gray-400 max-w-3xl leading-relaxed">
             I'm Randy Holland — a technical-forensics and AI-automation SEO. I work <span class="text-white font-semibold">white-label</span> with agencies as their GEO/AIO specialist and SEO overflow: everything ships under your brand, and I never touch your client relationship.
         </p>
         <div class="flex flex-wrap gap-3 mt-8">
-            <a href="#start" class="bg-lime-400 text-black font-bold px-6 py-3 rounded-lg hover:bg-lime-300 transition-colors">Get a free GEO teardown of one site →</a>
-            <a href="index.html" class="border border-gray-700 px-6 py-3 rounded-lg font-semibold hover:border-lime-400/60 transition-colors">See the portfolio</a>
+            <a href="#start" class="bg-brand text-black font-bold px-6 py-3 rounded-lg hover:bg-brand-light transition-colors">Get a free GEO teardown of one site →</a>
+            <a href="index.html" class="border border-gray-700 px-6 py-3 rounded-lg font-semibold hover:border-brand/60 transition-colors">See the portfolio</a>
         </div>
         <p class="text-sm text-gray-500 mt-6">Currently trusted by <span class="text-gray-300 font-semibold">Webfor</span> · <span class="text-gray-300 font-semibold">Insite SEO</span> · <span class="text-gray-300 font-semibold">a national FinTech</span> (Technical SEO, under NDA)</p>
-        <div class="h-[1px] w-full bg-gradient-to-r from-lime-400/30 to-transparent mt-10"></div>
+        <div class="h-[1px] w-full bg-gradient-to-r from-brand/30 to-transparent mt-10"></div>
     </header>
 
     <!-- readouts -->
     <section class="grid md:grid-cols-3 gap-6 mb-20">
-        <div class="card border border-gray-800 rounded-xl p-6 border-l-2 border-l-lime-400">
+        <div class="card border border-gray-800 rounded-xl p-6 border-l-2 border-l-brand">
             <div class="text-xs uppercase tracking-widest text-gray-500 font-bold">AI Overview citations</div>
-            <div class="text-4xl font-extrabold text-lime-400 mt-2 mb-1 tabular-nums">+3,000%</div>
+            <div class="text-4xl font-extrabold text-brand mt-2 mb-1 tabular-nums">+3,000%</div>
             <p class="text-sm text-gray-400">Year over year on an e-commerce restructure (Semrush) — the GEO work agencies can't yet staff.</p>
         </div>
-        <div class="card border border-gray-800 rounded-xl p-6 border-l-2 border-l-lime-400">
+        <div class="card border border-gray-800 rounded-xl p-6 border-l-2 border-l-brand">
             <div class="text-xs uppercase tracking-widest text-gray-500 font-bold">Keyword growth</div>
-            <div class="text-4xl font-extrabold text-lime-400 mt-2 mb-1 tabular-nums">+632%</div>
+            <div class="text-4xl font-extrabold text-brand mt-2 mb-1 tabular-nums">+632%</div>
             <p class="text-sm text-gray-400">Recovered 400+ pages serving crawlers 0 words &amp; 0 links → 100% indexation.</p>
         </div>
-        <div class="card border border-gray-800 rounded-xl p-6 border-l-2 border-l-lime-400">
+        <div class="card border border-gray-800 rounded-xl p-6 border-l-2 border-l-brand">
             <div class="text-xs uppercase tracking-widest text-gray-500 font-bold">Crawl budget reclaimed</div>
-            <div class="text-4xl font-extrabold text-lime-400 mt-2 mb-1 tabular-nums">99.9%</div>
+            <div class="text-4xl font-extrabold text-brand mt-2 mb-1 tabular-nums">99.9%</div>
             <p class="text-sm text-gray-400">Isolated a 921K-URL anomaly from an edge-firewall + data-leak collision.</p>
         </div>
     </section>
@@ -232,8 +233,8 @@
                     <div class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-3">A little more about me</div>
                     <p class="mb-4">Away from the crawl reports, I'm married to my wife, who's from Germany &mdash; we get back to Europe to see family and explore as often as we can. I'm a drummer, and so is my son Nick (he plays in an experimental hardcore band), so it's a loud house &mdash; I'll also be playing with School of Rock Vancouver's adult performance group. When I'm not behind a kit, you'll find me out across the PNW hiking, kayaking, or fishing. I'm a proud WSU Vancouver alum with deep roots throughout Southwest Washington and the Portland metro.</p>
                     <ul class="space-y-3">
-                        <li class="flex gap-3"><span class="text-lime-400 mt-1"><i class="fa-solid fa-comment-dots"></i></span><span><span class="text-white font-semibold">Straight talk, peer to peer.</span> Ten-plus years inside agencies taught me to skip the corporate jargon and retainer-speak &mdash; you get high-level technical work explained like a partner, not a vendor.</span></li>
-                        <li class="flex gap-3"><span class="text-lime-400 mt-1"><i class="fa-solid fa-diagram-project"></i></span><span><span class="text-white font-semibold">The fluff is fading &mdash; good.</span> I got into SEO for the mix of technical logic, strategy, and human behavior. What excites me now is that AI is pushing search back toward what actually matters: clean architecture, entity relationships, and authentic brand authority.</span></li>
+                        <li class="flex gap-3"><span class="text-brand mt-1"><i class="fa-solid fa-comment-dots"></i></span><span><span class="text-white font-semibold">Straight talk, peer to peer.</span> Ten-plus years inside agencies taught me to skip the corporate jargon and retainer-speak &mdash; you get high-level technical work explained like a partner, not a vendor.</span></li>
+                        <li class="flex gap-3"><span class="text-brand mt-1"><i class="fa-solid fa-diagram-project"></i></span><span><span class="text-white font-semibold">The fluff is fading &mdash; good.</span> I got into SEO for the mix of technical logic, strategy, and human behavior. What excites me now is that AI is pushing search back toward what actually matters: clean architecture, entity relationships, and authentic brand authority.</span></li>
                     </ul>
                 </div>
             </div>
@@ -242,7 +243,7 @@
                 <img src="randy-holland.jpg" alt="Randy Holland, GEO &amp; AIO Strategist based in Vancouver, WA" width="700" height="700" class="w-full h-auto block" loading="lazy">
                 <figcaption class="px-5 py-4 border-t border-gray-800">
                     <div class="text-white font-bold">Randy Holland</div>
-                    <div class="text-xs text-lime-400 font-semibold uppercase tracking-widest mt-1">GEO &amp; AIO Strategist &middot; Vancouver, WA</div>
+                    <div class="text-xs text-brand font-semibold uppercase tracking-widest mt-1">GEO &amp; AIO Strategist &middot; Vancouver, WA</div>
                 </figcaption>
             </figure>
             <div class="border border-gray-800 rounded-xl p-6 bg-gray-900/40">
@@ -258,10 +259,10 @@
                     <span class="border border-gray-700 text-gray-300 px-2.5 py-1 rounded-md">Looker Studio</span>
                     <span class="border border-gray-700 text-gray-300 px-2.5 py-1 rounded-md">Python</span>
                     <span class="border border-gray-700 text-gray-300 px-2.5 py-1 rounded-md">JSON-LD / Schema</span>
-                    <span class="border border-lime-400/40 text-lime-400 bg-lime-400/10 px-2.5 py-1 rounded-md">AI Overviews</span>
-                    <span class="border border-lime-400/40 text-lime-400 bg-lime-400/10 px-2.5 py-1 rounded-md">ChatGPT</span>
-                    <span class="border border-lime-400/40 text-lime-400 bg-lime-400/10 px-2.5 py-1 rounded-md">Perplexity</span>
-                    <span class="border border-lime-400/40 text-lime-400 bg-lime-400/10 px-2.5 py-1 rounded-md">Gemini</span>
+                    <span class="border border-brand/40 text-brand bg-brand/10 px-2.5 py-1 rounded-md">AI Overviews</span>
+                    <span class="border border-brand/40 text-brand bg-brand/10 px-2.5 py-1 rounded-md">ChatGPT</span>
+                    <span class="border border-brand/40 text-brand bg-brand/10 px-2.5 py-1 rounded-md">Perplexity</span>
+                    <span class="border border-brand/40 text-brand bg-brand/10 px-2.5 py-1 rounded-md">Gemini</span>
                 </div>
             </div>
             </div>
@@ -275,14 +276,14 @@
             <span class="text-sm text-gray-600 font-mono">// the white-label model</span>
         </div>
         <div class="grid md:grid-cols-2 gap-6">
-            <div class="card border border-gray-800 rounded-xl p-8 hover:border-lime-400/50 transition-all">
-                <span class="text-xs font-bold uppercase tracking-widest text-lime-400 bg-lime-400/10 px-3 py-1 rounded-full">If you already sell SEO</span>
+            <div class="card border border-gray-800 rounded-xl p-8 hover:border-brand/50 transition-all">
+                <span class="text-xs font-bold uppercase tracking-widest text-brand bg-brand/10 px-3 py-1 rounded-full">If you already sell SEO</span>
                 <h3 class="text-2xl font-bold mt-5 mb-3">Your AI-search specialist + overflow</h3>
                 <p class="text-gray-400 leading-relaxed">You have an SEO team — but AI Overviews, GEO and AEO are the part clients now ask about that's hard to staff. I own that layer and absorb overflow when you spike, so your team ships more without stretching.</p>
                 <p class="text-sm text-gray-600 mt-4 font-mono">Fit: Webfor · Mad Fish · Intuitive · Decoder · Techna · FarReach</p>
             </div>
-            <div class="card border border-gray-800 rounded-xl p-8 hover:border-lime-400/50 transition-all">
-                <span class="text-xs font-bold uppercase tracking-widest text-lime-400 bg-lime-400/10 px-3 py-1 rounded-full">If you build sites &amp; brands</span>
+            <div class="card border border-gray-800 rounded-xl p-8 hover:border-brand/50 transition-all">
+                <span class="text-xs font-bold uppercase tracking-widest text-brand bg-brand/10 px-3 py-1 rounded-full">If you build sites &amp; brands</span>
                 <h3 class="text-2xl font-bold mt-5 mb-3">Full white-label SEO &amp; GEO fulfillment</h3>
                 <p class="text-gray-400 leading-relaxed">Your clients keep asking to "get found" and "show up in AI answers." You sell the retainer under your brand; I deliver it behind the scenes. A new revenue line with no new hire — and no channel conflict.</p>
                 <p class="text-sm text-gray-600 mt-4 font-mono">Fit: Gravitate · Solid Digital · 97 Switch · Core Digital · IronGlove</p>
@@ -297,9 +298,9 @@
             <span class="text-sm text-gray-600 font-mono">// three labs</span>
         </div>
         <div class="grid md:grid-cols-3 gap-6">
-            <div class="border border-gray-800 p-8 rounded-xl hover:border-lime-400/60 transition-all card flex flex-col justify-between group">
+            <div class="border border-gray-800 p-8 rounded-xl hover:border-brand/60 transition-all card flex flex-col justify-between group">
                 <div>
-                    <div class="text-lime-400 text-3xl mb-4 group-hover:scale-105 transition-transform"><i class="fa-solid fa-prescription-bottle-medical"></i></div>
+                    <div class="text-brand text-3xl mb-4 group-hover:scale-105 transition-transform"><i class="fa-solid fa-prescription-bottle-medical"></i></div>
                     <h3 class="text-xl font-bold mb-3">Technical Forensics</h3>
                     <ul class="text-gray-400 text-sm leading-relaxed space-y-1.5">
                         <li>Indexation bloat &amp; crawl-budget recovery</li>
@@ -308,11 +309,11 @@
                         <li>Entity / Knowledge-Graph architecture</li>
                     </ul>
                 </div>
-                <a href="forensics.html" class="inline-block mt-6 text-white font-semibold border-b border-lime-400 pb-1 self-start hover:text-lime-400 transition-colors">Explore Forensics Lab →</a>
+                <a href="forensics.html" class="inline-block mt-6 text-white font-semibold border-b border-brand pb-1 self-start hover:text-brand transition-colors">Explore Forensics Lab →</a>
             </div>
-            <div class="border border-gray-800 p-8 rounded-xl hover:border-lime-400/60 transition-all card flex flex-col justify-between group">
+            <div class="border border-gray-800 p-8 rounded-xl hover:border-brand/60 transition-all card flex flex-col justify-between group">
                 <div>
-                    <div class="text-lime-400 text-3xl mb-4 group-hover:scale-105 transition-transform"><i class="fa-solid fa-microchip"></i></div>
+                    <div class="text-brand text-3xl mb-4 group-hover:scale-105 transition-transform"><i class="fa-solid fa-microchip"></i></div>
                     <h3 class="text-xl font-bold mb-3">AI Automation</h3>
                     <ul class="text-gray-400 text-sm leading-relaxed space-y-1.5">
                         <li>Python + Gemini query fan-out &amp; clustering</li>
@@ -321,11 +322,11 @@
                         <li>Custom LLM workflows</li>
                     </ul>
                 </div>
-                <a href="automation.html" class="inline-block mt-6 text-white font-semibold border-b border-lime-400 pb-1 self-start hover:text-lime-400 transition-colors">Explore Automation Lab →</a>
+                <a href="automation.html" class="inline-block mt-6 text-white font-semibold border-b border-brand pb-1 self-start hover:text-brand transition-colors">Explore Automation Lab →</a>
             </div>
-            <div class="border border-gray-800 p-8 rounded-xl hover:border-lime-400/60 transition-all card flex flex-col justify-between group">
+            <div class="border border-gray-800 p-8 rounded-xl hover:border-brand/60 transition-all card flex flex-col justify-between group">
                 <div>
-                    <div class="text-lime-400 text-3xl mb-4 group-hover:scale-105 transition-transform"><i class="fa-solid fa-robot"></i></div>
+                    <div class="text-brand text-3xl mb-4 group-hover:scale-105 transition-transform"><i class="fa-solid fa-robot"></i></div>
                     <h3 class="text-xl font-bold mb-3">GEO / AIO Strategy</h3>
                     <ul class="text-gray-400 text-sm leading-relaxed space-y-1.5">
                         <li>AI-Overview / RAG retrieval diagnostics</li>
@@ -334,7 +335,7 @@
                         <li>E-E-A-T &amp; content-decay defense</li>
                     </ul>
                 </div>
-                <a href="strategy.html" class="inline-block mt-6 text-white font-semibold border-b border-lime-400 pb-1 self-start hover:text-lime-400 transition-colors">Access Strategy Lab →</a>
+                <a href="strategy.html" class="inline-block mt-6 text-white font-semibold border-b border-brand pb-1 self-start hover:text-brand transition-colors">Access Strategy Lab →</a>
             </div>
         </div>
     </section>
@@ -346,29 +347,29 @@
             <span class="text-sm text-gray-600 font-mono">// selected engagements</span>
         </div>
         <div class="space-y-4">
-            <a href="strategy.html" class="card border border-gray-800 rounded-xl p-6 grid md:grid-cols-[130px_1fr_auto] gap-5 items-center hover:border-lime-400/60 transition-all group">
-                <div><div class="text-3xl font-extrabold text-lime-400 tabular-nums leading-none">+3,000%</div><div class="text-[11px] uppercase tracking-widest text-gray-500 font-bold mt-1.5">AI citations</div></div>
-                <div><h3 class="font-bold text-lg mb-1 group-hover:text-lime-400 transition-colors">The e-commerce restructure</h3><p class="text-sm text-gray-400">A full architecture and entity restructure drove <span class="text-gray-200">+3,000% AI Overview citations</span>, +654% organic traffic, and +980% growth in top-3 rankings year over year (Semrush).</p></div>
+            <a href="strategy.html" class="card border border-gray-800 rounded-xl p-6 grid md:grid-cols-[130px_1fr_auto] gap-5 items-center hover:border-brand/60 transition-all group">
+                <div><div class="text-3xl font-extrabold text-brand tabular-nums leading-none">+3,000%</div><div class="text-[11px] uppercase tracking-widest text-gray-500 font-bold mt-1.5">AI citations</div></div>
+                <div><h3 class="font-bold text-lg mb-1 group-hover:text-brand transition-colors">The e-commerce restructure</h3><p class="text-sm text-gray-400">A full architecture and entity restructure drove <span class="text-gray-200">+3,000% AI Overview citations</span>, +654% organic traffic, and +980% growth in top-3 rankings year over year (Semrush).</p></div>
                 <div class="text-[11px] font-mono text-gray-600 text-right hidden md:block">STRATEGY + GEO<br>e-commerce</div>
             </a>
-            <a href="phantom-crawl-loop.html" class="card border border-gray-800 rounded-xl p-6 grid md:grid-cols-[130px_1fr_auto] gap-5 items-center hover:border-lime-400/60 transition-all group">
-                <div><div class="text-3xl font-extrabold text-lime-400 tabular-nums leading-none">99.9%</div><div class="text-[11px] uppercase tracking-widest text-gray-500 font-bold mt-1.5">Crawl budget</div></div>
-                <div><h3 class="font-bold text-lg mb-1 group-hover:text-lime-400 transition-colors">The 921K phantom-page loop</h3><p class="text-sm text-gray-400">A backend data leak colliding with an edge-firewall misconfiguration spawned 921,000 phantom URLs. Isolated the loop and reclaimed 99.9% of crawl budget.</p></div>
+            <a href="phantom-crawl-loop.html" class="card border border-gray-800 rounded-xl p-6 grid md:grid-cols-[130px_1fr_auto] gap-5 items-center hover:border-brand/60 transition-all group">
+                <div><div class="text-3xl font-extrabold text-brand tabular-nums leading-none">99.9%</div><div class="text-[11px] uppercase tracking-widest text-gray-500 font-bold mt-1.5">Crawl budget</div></div>
+                <div><h3 class="font-bold text-lg mb-1 group-hover:text-brand transition-colors">The 921K phantom-page loop</h3><p class="text-sm text-gray-400">A backend data leak colliding with an edge-firewall misconfiguration spawned 921,000 phantom URLs. Isolated the loop and reclaimed 99.9% of crawl budget.</p></div>
                 <div class="text-[11px] font-mono text-gray-600 text-right hidden md:block">FORENSICS<br>regional retail</div>
             </a>
-            <a href="forensics.html" class="card border border-gray-800 rounded-xl p-6 grid md:grid-cols-[130px_1fr_auto] gap-5 items-center hover:border-lime-400/60 transition-all group">
-                <div><div class="text-3xl font-extrabold text-lime-400 tabular-nums leading-none">+632%</div><div class="text-[11px] uppercase tracking-widest text-gray-500 font-bold mt-1.5">Keywords</div></div>
-                <div><h3 class="font-bold text-lg mb-1 group-hover:text-lime-400 transition-colors">400+ pages Googlebot couldn't see</h3><p class="text-sm text-gray-400">A rendering failure served crawlers 0 words and 0 links across 400+ pages. Diagnosed it, coordinated the server-side fix, and validated 100% indexation — with +632% keyword growth.</p></div>
+            <a href="forensics.html" class="card border border-gray-800 rounded-xl p-6 grid md:grid-cols-[130px_1fr_auto] gap-5 items-center hover:border-brand/60 transition-all group">
+                <div><div class="text-3xl font-extrabold text-brand tabular-nums leading-none">+632%</div><div class="text-[11px] uppercase tracking-widest text-gray-500 font-bold mt-1.5">Keywords</div></div>
+                <div><h3 class="font-bold text-lg mb-1 group-hover:text-brand transition-colors">400+ pages Googlebot couldn't see</h3><p class="text-sm text-gray-400">A rendering failure served crawlers 0 words and 0 links across 400+ pages. Diagnosed it, coordinated the server-side fix, and validated 100% indexation — with +632% keyword growth.</p></div>
                 <div class="text-[11px] font-mono text-gray-600 text-right hidden md:block">FORENSICS<br>JS rendering</div>
             </a>
-            <a href="enterprise-cloud-security-migration.html" class="card border border-gray-800 rounded-xl p-6 grid md:grid-cols-[130px_1fr_auto] gap-5 items-center hover:border-lime-400/60 transition-all group">
-                <div><div class="text-3xl font-extrabold text-lime-400 tabular-nums leading-none">1&nbsp;wk</div><div class="text-[11px] uppercase tracking-widest text-gray-500 font-bold mt-1.5">Post-launch</div></div>
-                <div><h3 class="font-bold text-lg mb-1 group-hover:text-lime-400 transition-colors">Enterprise migration rescue</h3><p class="text-sm text-gray-400">Restored link equity and indexation-safety flags for a global cloud-security company inside a one-week post-launch window, alongside their web-dev team.</p></div>
+            <a href="enterprise-cloud-security-migration.html" class="card border border-gray-800 rounded-xl p-6 grid md:grid-cols-[130px_1fr_auto] gap-5 items-center hover:border-brand/60 transition-all group">
+                <div><div class="text-3xl font-extrabold text-brand tabular-nums leading-none">1&nbsp;wk</div><div class="text-[11px] uppercase tracking-widest text-gray-500 font-bold mt-1.5">Post-launch</div></div>
+                <div><h3 class="font-bold text-lg mb-1 group-hover:text-brand transition-colors">Enterprise migration rescue</h3><p class="text-sm text-gray-400">Restored link equity and indexation-safety flags for a global cloud-security company inside a one-week post-launch window, alongside their web-dev team.</p></div>
                 <div class="text-[11px] font-mono text-gray-600 text-right hidden md:block">FORENSICS<br>enterprise SaaS</div>
             </a>
-            <a href="geo-audit-case.html" class="card border border-gray-800 rounded-xl p-6 grid md:grid-cols-[130px_1fr_auto] gap-5 items-center hover:border-lime-400/60 transition-all group">
-                <div><div class="text-3xl font-extrabold text-lime-400 leading-none">RAG</div><div class="text-[11px] uppercase tracking-widest text-gray-500 font-bold mt-1.5">Diagnostic</div></div>
-                <div><h3 class="font-bold text-lg mb-1 group-hover:text-lime-400 transition-colors">GEO / AEO vulnerability protocol</h3><p class="text-sm text-gray-400">A repeatable framework that analyzes how AI engines and RAG systems extract a page — surfacing token dilution and retrieval gaps before they cost visibility in AI answers.</p></div>
+            <a href="geo-audit-case.html" class="card border border-gray-800 rounded-xl p-6 grid md:grid-cols-[130px_1fr_auto] gap-5 items-center hover:border-brand/60 transition-all group">
+                <div><div class="text-3xl font-extrabold text-brand leading-none">RAG</div><div class="text-[11px] uppercase tracking-widest text-gray-500 font-bold mt-1.5">Diagnostic</div></div>
+                <div><h3 class="font-bold text-lg mb-1 group-hover:text-brand transition-colors">GEO / AEO vulnerability protocol</h3><p class="text-sm text-gray-400">A repeatable framework that analyzes how AI engines and RAG systems extract a page — surfacing token dilution and retrieval gaps before they cost visibility in AI answers.</p></div>
                 <div class="text-[11px] font-mono text-gray-600 text-right hidden md:block">AI SEARCH<br>proprietary</div>
             </a>
         </div>
@@ -382,15 +383,15 @@
         </div>
         <div class="grid md:grid-cols-[1.1fr_.9fr] gap-6 items-start">
             <ul class="space-y-0">
-                <li class="flex gap-4 py-3 border-b border-dashed border-gray-800"><span class="text-lime-400 font-mono text-sm min-w-[92px] pt-0.5">White-label</span><span class="text-gray-400">Everything under your brand. I never contact or pitch your clients — in writing if you want it.</span></li>
-                <li class="flex gap-4 py-3 border-b border-dashed border-gray-800"><span class="text-lime-400 font-mono text-sm min-w-[92px] pt-0.5">Flexible</span><span class="text-gray-400">Ongoing retainer, on-call overflow, or fixed-scope audits. You keep the markup.</span></li>
-                <li class="flex gap-4 py-3 border-b border-dashed border-gray-800"><span class="text-lime-400 font-mono text-sm min-w-[92px] pt-0.5">Local</span><span class="text-gray-400">Portland–Vancouver based. Happy to join a kickoff, a QBR, or a client pitch in person.</span></li>
-                <li class="flex gap-4 py-3"><span class="text-lime-400 font-mono text-sm min-w-[92px] pt-0.5">Proven</span><span class="text-gray-400">Active agency &amp; FinTech clients; references available on request.</span></li>
+                <li class="flex gap-4 py-3 border-b border-dashed border-gray-800"><span class="text-brand font-mono text-sm min-w-[92px] pt-0.5">White-label</span><span class="text-gray-400">Everything under your brand. I never contact or pitch your clients — in writing if you want it.</span></li>
+                <li class="flex gap-4 py-3 border-b border-dashed border-gray-800"><span class="text-brand font-mono text-sm min-w-[92px] pt-0.5">Flexible</span><span class="text-gray-400">Ongoing retainer, on-call overflow, or fixed-scope audits. You keep the markup.</span></li>
+                <li class="flex gap-4 py-3 border-b border-dashed border-gray-800"><span class="text-brand font-mono text-sm min-w-[92px] pt-0.5">Local</span><span class="text-gray-400">Portland–Vancouver based. Happy to join a kickoff, a QBR, or a client pitch in person.</span></li>
+                <li class="flex gap-4 py-3"><span class="text-brand font-mono text-sm min-w-[92px] pt-0.5">Proven</span><span class="text-gray-400">Active agency &amp; FinTech clients; references available on request.</span></li>
             </ul>
             <div class="border border-gray-800 rounded-xl p-6 bg-gray-900/40 font-mono">
                 <div class="text-xs uppercase tracking-widest text-gray-500 font-bold mb-2">Partner rates</div>
-                <div class="flex justify-between items-baseline py-3 border-b border-gray-800"><span class="text-gray-400">Standard</span><span class="text-2xl font-extrabold text-lime-400">$60<span class="text-sm text-gray-500">/hr</span></span></div>
-                <div class="flex justify-between items-baseline py-3 border-b border-gray-800"><span class="text-gray-400">Intro / first project</span><span class="text-2xl font-extrabold text-lime-400">$45<span class="text-sm text-gray-500">/hr</span></span></div>
+                <div class="flex justify-between items-baseline py-3 border-b border-gray-800"><span class="text-gray-400">Standard</span><span class="text-2xl font-extrabold text-brand">$60<span class="text-sm text-gray-500">/hr</span></span></div>
+                <div class="flex justify-between items-baseline py-3 border-b border-gray-800"><span class="text-gray-400">Intro / first project</span><span class="text-2xl font-extrabold text-brand">$45<span class="text-sm text-gray-500">/hr</span></span></div>
                 <div class="flex justify-between items-baseline py-3"><span class="text-gray-400">Fixed-scope audits</span><span class="text-sm text-gray-500">by project</span></div>
                 <p class="text-xs text-gray-500 mt-4 leading-relaxed">Transparent, agency-friendly pricing — no minimums to start. Ask for the full partner rate sheet.</p>
             </div>
@@ -398,12 +399,12 @@
     </section>
 
     <!-- CTA -->
-    <section id="start" class="scroll-mt-8 border border-lime-400/20 rounded-2xl p-10 md:p-14 text-center bg-lime-400/[.03] mb-8">
-        <span class="text-xs font-bold tracking-widest text-lime-400 uppercase">Free · no commitment</span>
+    <section id="start" class="scroll-mt-8 border border-brand/20 rounded-2xl p-10 md:p-14 text-center bg-brand/[.03] mb-8">
+        <span class="text-xs font-bold tracking-widest text-brand uppercase">Free · no commitment</span>
         <h2 class="text-2xl md:text-4xl font-extrabold mt-4 max-w-2xl mx-auto leading-tight tracking-tight">Send me one client site &mdash; I'll send back a teardown showing exactly where it stands in AI search.</h2>
         <p class="text-gray-400 max-w-xl mx-auto mt-4">You'll see exactly where an AI answer is intercepting their traffic and the first fixes — a real look at how I work before anything's on the table.</p>
         <div class="flex flex-wrap gap-3 justify-center mt-8">
-            <a href="https://www.linkedin.com/in/webrandyholland/" target="_blank" rel="noopener" class="bg-lime-400 text-black font-bold px-6 py-3 rounded-lg hover:bg-lime-300 transition-colors">Message me on LinkedIn →</a>
+            <a href="https://www.linkedin.com/in/webrandyholland/" target="_blank" rel="noopener" class="bg-brand text-black font-bold px-6 py-3 rounded-lg hover:bg-brand-light transition-colors">Message me on LinkedIn →</a>
         </div>
     </section>
 </div>
@@ -411,11 +412,11 @@
 <footer class="max-w-6xl mx-auto w-full border-t border-gray-950 py-8 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-600">
     <p>© 2026 Randy Holland · Technical SEO · GEO/AIO · AI Automation</p>
     <div class="flex gap-4 mt-4 sm:mt-0">
-        <a href="index.html" class="hover:text-lime-400 transition-colors">Portfolio</a>
+        <a href="index.html" class="hover:text-brand transition-colors">Portfolio</a>
         <span class="text-gray-800">|</span>
-        <a href="https://github.com/rndholland-png" target="_blank" rel="noopener" class="hover:text-lime-400 transition-colors">GitHub</a>
+        <a href="https://github.com/rndholland-png" target="_blank" rel="noopener" class="hover:text-brand transition-colors">GitHub</a>
         <span class="text-gray-800">|</span>
-        <a href="https://www.linkedin.com/in/webrandyholland/" target="_blank" rel="noopener" class="hover:text-lime-400 transition-colors">LinkedIn</a>
+        <a href="https://www.linkedin.com/in/webrandyholland/" target="_blank" rel="noopener" class="hover:text-brand transition-colors">LinkedIn</a>
         <span class="text-gray-800">|</span>
         <span class="text-gray-500">Vancouver, WA</span>
     </div>

@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GEO/AEO Vulnerability Protocol | Randy Holland Case Study</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{colors:{brand:{DEFAULT:'#1E8BCB',light:'#4FB6E0',dark:'#0E2951'}}}}}</script>
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <style>
-        body { font-family: 'Urbanist', sans-serif; background-color: #0a0a0a; color: #ffffff; }
+        body { font-family: 'Urbanist', sans-serif; background-color: #0A1B30; color: #ffffff; }
         ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #0a0a0a; }
+        ::-webkit-scrollbar-track { background: #0A1B30; }
         ::-webkit-scrollbar-thumb { background: #1f2937; border-radius: 3px; }
         ::-webkit-scrollbar-thumb:hover { background: #a3e635; }
     </style>
@@ -18,14 +19,14 @@
 <body class="p-8">
     <div class="max-w-4xl mx-auto">
         <!-- Navigation -->
-        <a href="javascript:history.back()" class="text-lime-400 hover:text-white transition-colors mb-8 inline-flex items-center gap-2">
+        <a href="javascript:history.back()" class="text-brand hover:text-white transition-colors mb-8 inline-flex items-center gap-2">
             <i class="fa-solid fa-arrow-left text-xs"></i> Back to Automation Lab
         </a>
         
         <!-- Header -->
         <header class="mb-12 border-b border-gray-900 pb-8">
             <div class="flex flex-wrap gap-2 mb-4">
-                <span class="text-[10px] font-mono bg-lime-400/10 text-lime-400 px-2 py-1 rounded border border-lime-400/20">GEO & AEO Architecture</span>
+                <span class="text-[10px] font-mono bg-brand/10 text-brand px-2 py-1 rounded border border-brand/20">GEO & AEO Architecture</span>
                 <span class="text-[10px] font-mono bg-gray-800 text-gray-400 px-2 py-1 rounded">RAG Pipelines</span>
                 <span class="text-[10px] font-mono bg-gray-800 text-gray-400 px-2 py-1 rounded">Vector Space Modeling</span>
             </div>
@@ -61,7 +62,7 @@
             <!-- Section 1: The Paradigm Shift -->
             <section>
                 <h2 class="text-xl font-bold mb-4 text-white flex items-center gap-3">
-                    <span class="text-lime-400"><i class="fa-solid fa-circle-nodes"></i></span> The Paradigm Shift: Beyond Keywords
+                    <span class="text-brand"><i class="fa-solid fa-circle-nodes"></i></span> The Paradigm Shift: Beyond Keywords
                 </h2>
                 <p class="mb-4">
                     Traditional SEO optimizes for human users skimming visual layouts and legacy spiders parsing keyword frequencies. Modern Answer Engines (Perplexity, ChatGPT Search, Gemini Web Search) operate differently. They deploy <strong class="text-white">RAG (Retrieval-Augmented Generation)</strong> architecture—scraping web pages, fragmenting text into discrete data chunks, and translating them into mathematical vector embeddings.
@@ -74,7 +75,7 @@
             <!-- Section 2: Technical Execution -->
             <section>
                 <h2 class="text-xl font-bold mb-4 text-white flex items-center gap-3">
-                    <span class="text-lime-400"><i class="fa-solid fa-code"></i></span> Core Extraction & Node Deconstruction
+                    <span class="text-brand"><i class="fa-solid fa-code"></i></span> Core Extraction & Node Deconstruction
                 </h2>
                 <p class="mb-6">
                     Evaluating content through a standard browser browser-view creates blind spots. Page builders often hide duplicate variations of text within hidden elements to handle mobile and desktop responsive styling. While humans see one clean layout, AI engines parse the entire raw code stream sequentially, penalizing structural repetition as low-quality filler. 
@@ -84,9 +85,9 @@
                 <div class="bg-black/50 border border-gray-800 rounded-xl p-5 mb-6 font-mono text-xs">
                     <div class="flex justify-between items-center text-gray-500 border-b border-gray-900 pb-3 mb-4">
                         <span>DOM_extraction_sequence.js</span>
-                        <span class="text-lime-400">ACTIVE</span>
+                        <span class="text-brand">ACTIVE</span>
                     </div>
-                    <pre class="text-lime-400/90 overflow-x-auto"><code>// Step 1: Extract complete, raw text content from the active DOM
+                    <pre class="text-brand/90 overflow-x-auto"><code>// Step 1: Extract complete, raw text content from the active DOM
 let rawText = document.body.textContent;
 
 // Step 2: Strip layout boilerplate to isolate unique page nodes
@@ -106,7 +107,7 @@ function purgeBoilerplate(html) {
             <!-- Section 3: Diagnostic Framework Matrix -->
             <section>
                 <h2 class="text-xl font-bold mb-4 text-white flex items-center gap-3">
-                    <span class="text-lime-400"><i class="fa-solid fa-table-cells"></i></span> The 4-Dimensional Scoring Framework
+                    <span class="text-brand"><i class="fa-solid fa-table-cells"></i></span> The 4-Dimensional Scoring Framework
                 </h2>
                 <p class="mb-6">
                     Extracted text streams are systematically routed through four core AI search evaluation metrics to benchmark exact optimization scores:
@@ -126,22 +127,22 @@ function purgeBoilerplate(html) {
                             <tr>
                                 <td class="p-4 font-bold text-white">1. Entity Density</td>
                                 <td class="p-4 text-gray-400">Measures concentration of explicit Knowledge Graph links (verifiable organizations, executives, localized geographies, and regulatory frameworks).</td>
-                                <td class="p-4 text-right font-mono text-lime-400 font-bold">&gt; 8.5 / 10</td>
+                                <td class="p-4 text-right font-mono text-brand font-bold">&gt; 8.5 / 10</td>
                             </tr>
                             <tr>
                                 <td class="p-4 font-bold text-white">2. Info-to-Fluff Ratio</td>
                                 <td class="p-4 text-gray-400">Identifies token weight dilution. Discards subjective adverbs and generic market slogans that provide zero extractable vector facts.</td>
-                                <td class="p-4 text-right font-mono text-lime-400 font-bold">&lt; 20% Boilerplate</td>
+                                <td class="p-4 text-right font-mono text-brand font-bold">&lt; 20% Boilerplate</td>
                             </tr>
                             <tr>
                                 <td class="p-4 font-bold text-white">3. Retrieval Gaps</td>
                                 <td class="p-4 text-gray-400">Isolates failure points against advanced conversational B2B vetting queries (e.g., explicit compliance codes, exact insurance caps, response timelines).</td>
-                                <td class="p-4 text-right font-mono text-lime-400 font-bold">0 Active Gaps</td>
+                                <td class="p-4 text-right font-mono text-brand font-bold">0 Active Gaps</td>
                             </tr>
                             <tr>
                                 <td class="p-4 font-bold text-white">4. Citation Probability</td>
                                 <td class="p-4 text-gray-400">Calculates mathematical confidence scoring that the text block serves as a primary source snippet for complex recommendation prompts.</td>
-                                <td class="p-4 text-right font-mono text-lime-400 font-bold">High/Confidant</td>
+                                <td class="p-4 text-right font-mono text-brand font-bold">High/Confidant</td>
                             </tr>
                         </tbody>
                     </table>
@@ -151,12 +152,12 @@ function purgeBoilerplate(html) {
             <!-- Section 4: Operational Scaling Strategy -->
             <section>
                 <h2 class="text-xl font-bold mb-4 text-white flex items-center gap-3">
-                    <span class="text-lime-400"><i class="fa-solid fa-layer-group"></i></span> Operationalizing the Content Strategy
+                    <span class="text-brand"><i class="fa-solid fa-layer-group"></i></span> Operationalizing the Content Strategy
                 </h2>
                 <p class="mb-4">
                     Manually processing every URL across an enterprise footprint creates immediate operational bottlenecks. To scale this framework efficiently, the diagnostic shifts from reactive page-by-page editing to a proactive <strong class="text-white">Structural Template Playbook</strong> model:
                 </p>
-                <ul class="space-y-3 pl-5 list-disc marker:text-lime-400 mb-6">
+                <ul class="space-y-3 pl-5 list-disc marker:text-brand mb-6">
                     <li><strong>Template-Level Injectors:</strong> Hard-coding responsive "Corporate Data Blocks" and "Vertical Co-Citation Modules" directly into layout themes to instantly upgrade systemic entity weight across hundreds of child nodes simultaneously.</li>
                     <li><strong>Lifecycle Gatekeeping:</strong> Injecting a mandatory raw-text "factual density check" into the production framework. Content assets are systematically validated for entity connectivity metrics before deployment clearance.</li>
                 </ul>
