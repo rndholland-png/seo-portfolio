@@ -1,0 +1,10 @@
+title: EntityAndSearch
+description: "Notes on GEO, AIO, and technical SEO by Randy Holland — making brands legible to AI answer engines."
+url: "https://entityandsearch.com"
+author:
+  name: Randy Holland
+permalink: /blog/:title/
+plugins:
+  - jekyll-feed
+feed:
+  path: /blog/feed.xml

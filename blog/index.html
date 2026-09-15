@@ -1,0 +1,21 @@
+---
+layout: base
+title: Blog
+description: "Notes on GEO, AIO, and technical SEO — making brands legible to AI answer engines."
+---
+<header class="mb-10">
+  <span class="text-xs font-bold tracking-widest text-brand uppercase bg-brand/10 px-3 py-1 rounded-full">Blog</span>
+  <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mt-4 mb-3">Notes on GEO, AIO &amp; technical SEO</h1>
+  <p class="text-lg text-gray-400 max-w-2xl leading-relaxed">Field notes on making brands legible to AI answer engines — from Randy Holland.</p>
+</header>
+<div class="space-y-5">
+  {% for post in site.posts %}
+  <a href="{{ post.url }}" class="card border border-gray-800 rounded-xl p-6 block hover:border-brand/60 transition-all group">
+    <div class="text-xs text-gray-500 font-semibold uppercase tracking-widest mb-2"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time></div>
+    <h2 class="text-xl md:text-2xl font-bold group-hover:text-brand transition-colors mb-2">{{ post.title }}</h2>
+    {% if post.description %}<p class="text-gray-400 text-sm leading-relaxed mb-3">{{ post.description }}</p>{% endif %}
+    {% if post.tags %}<div class="flex flex-wrap gap-2">{% for tag in post.tags %}<span class="text-[11px] font-semibold uppercase tracking-widest text-gray-400 border border-gray-700 px-2 py-0.5 rounded-full">{{ tag }}</span>{% endfor %}</div>{% endif %}
+  </a>
+  {% endfor %}
+  {% if site.posts.size == 0 %}<p class="text-gray-500">No posts yet — check back soon.</p>{% endif %}
+</div>

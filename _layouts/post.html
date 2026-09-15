@@ -1,0 +1,45 @@
+---
+layout: base
+---
+<article>
+  <a href="/blog/" class="text-sm text-brand hover:text-brand-light transition-colors">← All posts</a>
+  <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight leading-tight mt-5 mb-3">{{ page.title }}</h1>
+  <div class="text-sm text-gray-400 mb-4"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time> · by Randy Holland</div>
+  {% if page.tags %}<div class="flex flex-wrap gap-2 mb-8">{% for tag in page.tags %}<span class="text-xs font-semibold uppercase tracking-widest text-brand bg-brand/10 px-2.5 py-1 rounded-full">{{ tag }}</span>{% endfor %}</div>{% endif %}
+  <div class="h-px w-full bg-gradient-to-r from-brand/40 to-transparent mb-8"></div>
+  <div class="post-content">
+    {{ content }}
+  </div>
+  <div class="mt-12 pt-6 border-t border-gray-800 text-sm text-gray-400">
+    Written by <span class="text-white font-semibold">Randy Holland</span> — GEO &amp; AIO strategist, Vancouver, WA.
+    <a href="https://www.linkedin.com/in/webrandyholland/" target="_blank" rel="noopener" class="text-brand hover:text-brand-light">Connect on LinkedIn →</a>
+  </div>
+</article>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ page.title | jsonify }},
+  "description": {{ page.description | jsonify }},
+  "datePublished": "{{ page.date | date_to_xmlschema }}",
+  "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+  "url": "{{ page.url | absolute_url }}",
+  "mainEntityOfPage": "{{ page.url | absolute_url }}",
+  {% if page.image %}"image": "{{ page.image | absolute_url }}",{% endif %}
+  "author": {
+    "@type": "Person",
+    "@id": "https://entityandsearch.com/#randy",
+    "name": "Randy Holland",
+    "url": "https://entityandsearch.com/",
+    "sameAs": [
+      "https://www.linkedin.com/in/webrandyholland/",
+      "https://github.com/rndholland-png"
+    ]
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "EntityAndSearch",
+    "logo": { "@type": "ImageObject", "url": "https://entityandsearch.com/logo-entityandsearch.png" }
+  }
+}
+</script>
