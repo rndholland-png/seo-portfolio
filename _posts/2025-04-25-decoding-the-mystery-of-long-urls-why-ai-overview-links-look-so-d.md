@@ -9,7 +9,7 @@ original_source: https://www.linkedin.com/pulse/decoding-mystery-long-urls-why-a
 
 You've done the hard work. Your content is ranking, even snagging that coveted spot in Googles AI Overview! You click the link, eager to see your triumph, but the URL in the address bar looks like it went on a digital adventure of its own. Whats with all that extra stuff tacked onto the end? If you've ever clicked a link from an AI Overview or even a Featured Snippet in Google and noticed a URL that looks something like this:
 
-<https://www.example.com/your-amazing-content#:~:text=This%20is%20the,highlighted%20text>.
+`https://www.example.com/your-amazing-content#:~:text=This%20is%20the,highlighted%20text`.
 
 You're not alone in wondering what all that extra information signifies. That seemingly complex string of characters is actually quite informative and serves some valuable purposes.
 
