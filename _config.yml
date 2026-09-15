@@ -6,5 +6,6 @@ author:
 permalink: /blog/:title/
 plugins:
   - jekyll-feed
+  - jekyll-redirect-from
 feed:
   path: /blog/feed.xml

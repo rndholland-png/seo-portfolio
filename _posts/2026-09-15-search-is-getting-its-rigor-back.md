@@ -24,4 +24,4 @@ The tactics that never should have worked — keyword stuffing, thin pages, link
 
 This post is on `entityandsearch.com` on purpose. Publishing on my own domain — with proper `Article` and `Person` schema, a canonical that points home, and a consistent author entity — is the same advice I give clients. Own your content, make it legible, and let the engines connect the dots.
 
-More field notes to come. If you run an agency and your clients are starting to ask about AI search, [let's talk](/for-agencies.html).
+More field notes to come. If you run an agency and your clients are starting to ask about AI search, [let's talk](/for-agencies/).
