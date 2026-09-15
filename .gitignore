@@ -1,0 +1,11 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Editor / agent scratch
+Claude outputs/
+
+# Jekyll local build artifacts (if you ever build locally)
+_site/
+.jekyll-cache/
+.jekyll-metadata
