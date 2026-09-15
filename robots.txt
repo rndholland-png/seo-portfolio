@@ -1,0 +1,6 @@
+# robots.txt for entityandsearch.com
+# All crawlers — including AI answer engines — are welcome.
+User-agent: *
+Allow: /
+
+Sitemap: https://entityandsearch.com/sitemap.xml

@@ -7,5 +7,6 @@ permalink: /blog/:title/
 plugins:
   - jekyll-feed
   - jekyll-redirect-from
+  - jekyll-sitemap
 feed:
   path: /blog/feed.xml
