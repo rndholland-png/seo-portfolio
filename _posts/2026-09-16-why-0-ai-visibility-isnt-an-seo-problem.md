@@ -35,7 +35,7 @@ Here is where the counterintuitive truth of GEO emerges: traditional SEO metrics
 | Brand B | 181 (most) | 28 (highest) | 68 / 100 | 5% |
 | Brand C | 89 (mid) | 14 (mid) | 78 (highest) | **0% — invisible** |
 
-*Data compiled via live AI search sampling, JavaScript-rendered site crawls, and search authority index metrics.*
+*Data compiled via live AI search sampling, JavaScript-rendered site crawls, and search authority index metrics. Visibility was gathered and scored with help from [CiteRank](https://citerankscore.com/).*
 
 ### Why the legacy playbook failed
 
@@ -44,6 +44,13 @@ Here is where the counterintuitive truth of GEO emerges: traditional SEO metrics
 - **Automated "GEO" tools didn't decide it:** Brand C scored the **highest** on a third-party automated GEO readiness index (78/100) but was cited **0% of the time**.
 
 Automated audit tools and standard SEO metrics don't reflect live AI search reality. **Entity legibility** is what actually dictates AI citations.
+
+<div class="resource">
+  <h4>🎁 Free tool — run this teardown on your own brand</h4>
+  <p>I’ve packaged the exact framework from this audit into a free <strong>AI Visibility Tracker</strong> spreadsheet. Log your citation rate across ChatGPT, Perplexity, Gemini, and Google AI Overviews and see where you — or your clients — actually stand.</p>
+  <p><a class="btn" href="https://docs.google.com/spreadsheets/d/1hYX3oa-_YA33PiJScpt_NSbiyrSShoep/copy" target="_blank" rel="noopener">Get the free AI Visibility Tracker →</a></p>
+  <p class="note">Opens in Google Sheets — click “Make a copy” to save your own editable version.</p>
+</div>
 
 ## Why Automated Audit Tools Need a "Human in the Loop"
 
