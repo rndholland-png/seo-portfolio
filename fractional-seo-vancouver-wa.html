@@ -12,6 +12,18 @@ permalink: /fractional-seo-vancouver-wa/
   gtag('js', new Date());
   gtag('config', 'G-G09KQ548KW');
 </script>
+<!-- lead-click tracking (mailto/tel) -->
+<script>
+document.addEventListener('click', function(e){
+  var a = e.target.closest && e.target.closest('a[href^="mailto:"], a[href^="tel:"]');
+  if(!a || typeof gtag !== 'function') return;
+  gtag('event', 'click', {
+    link_url: a.getAttribute('href'),
+    link_text: (a.textContent || '').trim().slice(0,100),
+    outbound: true
+  });
+});
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fractional SEO Consultant · Vancouver WA &amp; Portland</title>
