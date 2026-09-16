@@ -1,0 +1,48 @@
+# EntityAndSearch — Randy Holland
+
+> Fractional SEO and GEO (Generative Engine Optimization) strategist based in Vancouver, WA, serving Clark County and the Portland, Oregon metro. Randy Holland helps local service businesses and marketing agencies get found in Google — and cited by AI answer engines like ChatGPT, Perplexity, Gemini, and Google's AI Overviews.
+
+Randy Holland has 15+ years in technical SEO (WSU Vancouver alumnus, former senior technical resource at a Portland-metro agency). EntityAndSearch focuses on making brands legible to both traditional search and generative AI: technical SEO audits, schema and entity architecture, and AI-search (GEO/AIO) strategy — delivered white-label for agencies or directly for high-ticket local businesses such as custom home builders and home-service providers. Contact: hello@entityandsearch.com.
+
+## Start Here
+- [Home — Fractional SEO Consultant & GEO Strategist](https://entityandsearch.com/): Overview of Randy Holland's fractional SEO and GEO services for agencies and Pacific Northwest businesses.
+- [Fractional SEO for Vancouver, WA & the Portland Metro](https://entityandsearch.com/fractional-seo-vancouver-wa/): Local, in-person fractional SEO and GEO for Clark County and Portland-metro service businesses.
+- [White-Label SEO, GEO & AIO for Agencies](https://entityandsearch.com/for-agencies/): Behind-the-scenes technical SEO, GEO, and AI-search fulfillment delivered under an agency's brand.
+- [Blog](https://entityandsearch.com/blog/): Notes on GEO, AIO, and technical SEO — making brands legible to AI answer engines.
+
+## Case Studies & Technical Work
+- [GEO/AEO Vulnerability Protocol](https://entityandsearch.com/geo-audit-case/): Auditing how exposed a brand's content is to AI answer engines, and where its answers are vulnerable.
+- [Entity Architecture](https://entityandsearch.com/entity-schema-case/): Building a consolidated entity and schema graph so search engines and LLMs correctly understand a brand.
+- [Programmatic Query Fanout & LLM Alignment](https://entityandsearch.com/query-fanout-case/): Modeling the sub-queries AI engines generate (query fan-out) and aligning content to them.
+- [Geographic URL Architecture & Siloing](https://entityandsearch.com/geographic-architecture/): Structuring multi-location URLs and internal siloing for geographic and local relevance.
+- [The 921K Phantom Page Loop](https://entityandsearch.com/phantom-crawl-loop/): Diagnosing and eliminating a crawl trap that generated 921,000 phantom URLs.
+- [Enterprise Content Decay & AI Overview Alignment](https://entityandsearch.com/roofing-decay-case/): Reversing enterprise content decay and realigning it for Google's AI Overviews.
+- [JavaScript Rendering Diagnostics](https://entityandsearch.com/medical-coding-case/): Diagnosing indexation failures caused by client-side JavaScript rendering.
+- [Proactive IA & Technical SEO Audit (B2B FinTech)](https://entityandsearch.com/nexus-fintech-audit-case/): Information-architecture and technical SEO audit for a national B2B fintech.
+- [Enterprise eCommerce SEO Blueprint (Wayfair Case Study)](https://entityandsearch.com/wayfair-pitch-case/): A technical and IA blueprint for enterprise e-commerce SEO at scale.
+- [Enterprise IA Blueprint](https://entityandsearch.com/signage-ia-case/): An information-architecture blueprint for a large enterprise website.
+- [Intent Alignment Case Study](https://entityandsearch.com/container-intent-case/): Aligning page content and structure to searcher intent.
+- [Global Enterprise Cloud Security Migration](https://entityandsearch.com/enterprise-cloud-security-migration/): Preserving and growing organic visibility through a large enterprise site migration.
+- [The SEO Grid](https://entityandsearch.com/seo-grid-case/): A systematic framework for prioritizing SEO work by impact and effort.
+- [BugCast: Predictive Weather SEO](https://entityandsearch.com/bugcast-case/): A predictive, weather-driven programmatic SEO concept.
+
+## Labs
+- [Technical Forensics Lab](https://entityandsearch.com/forensics/): Diagnosing indexation, crawl, and JavaScript rendering issues.
+- [Innovation & AI Automation Lab](https://entityandsearch.com/automation/): Python scripts, programmatic LLM workflows, and automation for SEO at scale.
+- [Architecture & Strategy Lab](https://entityandsearch.com/strategy/): Site architecture, content taxonomy, and intent-based strategy.
+
+## Selected Articles
+- [Search Is Getting Its Rigor Back](https://entityandsearch.com/blog/search-is-getting-its-rigor-back/): Why Randy publishes on his own domain, and what GEO actually rewards now that AI answers are the front door to search.
+- [LLMs.txt: A Low-Risk Experiment in Defining AI Content Access](https://entityandsearch.com/blog/llms-txt-a-low-risk-experiment-in-defining-ai-content-access/): A practical, skeptical look at the llms.txt proposal and how site owners can manage AI content access.
+- [Why Traditional Search Is Still the Secret Backbone of AI Visibility](https://entityandsearch.com/blog/why-traditional-search-is-still-the-secret-backbone-of-ai-visibil/): Why classic technical SEO still underpins visibility in AI answer engines.
+- [How to Optimize Your Content for Google's AI-Driven Search Results](https://entityandsearch.com/blog/how-to-optimize-your-content-for-success-in-google-s-ai-driven-se/): Practical content optimization for AI Overviews and AI-powered search.
+- [The "Geographic Advantage" Is Real: Google's Feb 2026 Update and Local SEO](https://entityandsearch.com/blog/the-geographic-advantage-is-real-why-google-s-feb-2026-update-is/): Why local relevance is a growing ranking and AI-visibility advantage.
+- [What AI Really Says About Your Business — and Where It Gets the Information](https://entityandsearch.com/blog/what-ai-really-says-about-your-business-and-where-it-gets-the-inf/): Auditing one local brand across four AI search engines to expose gaps and inaccuracies.
+- [The $20 "Raw DOM + Claude" Hack for AI Search Optimization](https://entityandsearch.com/blog/stop-buying-500-mo-geo-tools-the-20-raw-dom-claude-hack-for-ai-se/): A low-cost alternative to expensive enterprise GEO tools.
+- [JavaScript SEO Audit Fails: Rendering, Indexing, and How to Fix Them](https://entityandsearch.com/blog/javascript-seo-audit-fails-rendering-indexing-and-how-to-fix-them/): Why standard audits miss rendering issues in React/Angular/Vue sites, and how to fix them.
+- [AI Search in Finance Is an 80/20 Game](https://entityandsearch.com/blog/ai-search-in-finance-is-an-80-20-game-and-your-website-is-only-20/): Why your owned domain is only part of the AI-search equation in regulated industries.
+
+## Optional
+- [Full blog archive](https://entityandsearch.com/blog/): All articles on GEO, AIO, and technical SEO.
+- [Blog RSS feed](https://entityandsearch.com/blog/feed.xml): Machine-readable feed of new posts.
+- [XML sitemap](https://entityandsearch.com/sitemap.xml): Complete list of indexable URLs.
