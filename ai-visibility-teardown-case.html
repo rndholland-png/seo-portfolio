@@ -1,0 +1,272 @@
+---
+permalink: /ai-visibility-teardown-case/
+redirect_from:
+  - /ai-visibility-teardown-case.html
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Visibility Teardown: Diagnosing a 0% Citation Rate | Randy Holland Case Study</title>
+    <meta name="description" content="A live, 4-engine forensic teardown of three competing regional sites — diagnosing why the brand with the fewest reviews and lowest authority won 45% of AI citations while the 'strongest' site scored 0%.">
+    <link rel="canonical" href="https://entityandsearch.com/ai-visibility-teardown-case/">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon-180.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>tailwind.config={theme:{extend:{colors:{brand:{DEFAULT:'#1E8BCB',light:'#4FB6E0',dark:'#0E2951'}}}}}</script>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { font-family: 'Urbanist', sans-serif; background-color: #0A1B30; color: #ffffff; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0A1B30; }
+        ::-webkit-scrollbar-thumb { background: #1f2937; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #1E8BCB; }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebPage",
+          "@id": "https://entityandsearch.com/ai-visibility-teardown-case/#webpage",
+          "url": "https://entityandsearch.com/ai-visibility-teardown-case/",
+          "name": "AI Visibility Teardown: Diagnosing a 0% Citation Rate",
+          "about": { "@id": "https://entityandsearch.com/#randy" },
+          "isPartOf": { "@id": "https://entityandsearch.com/#website" },
+          "primaryImageOfPage": "https://entityandsearch.com/assets/blog/why-0-ai-visibility-isnt-an-seo-problem/cover.png",
+          "breadcrumb": { "@id": "https://entityandsearch.com/ai-visibility-teardown-case/#breadcrumb" }
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://entityandsearch.com/ai-visibility-teardown-case/#breadcrumb",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://entityandsearch.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Technical Forensics", "item": "https://entityandsearch.com/forensics/" },
+            { "@type": "ListItem", "position": 3, "name": "AI Visibility Teardown" }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="p-8">
+    <div class="max-w-4xl mx-auto">
+        <!-- Navigation -->
+        <a href="/forensics/" class="text-brand hover:text-white transition-colors mb-8 inline-flex items-center gap-2">
+            <i class="fa-solid fa-arrow-left text-xs"></i> Back to Technical Forensics Lab
+        </a>
+
+        <!-- Header -->
+        <header class="mb-12 border-b border-gray-900 pb-8">
+            <div class="flex flex-wrap gap-2 mb-4">
+                <span class="text-[10px] font-mono bg-brand/10 text-brand px-2 py-1 rounded border border-brand/20">GEO Forensics</span>
+                <span class="text-[10px] font-mono bg-gray-800 text-gray-400 px-2 py-1 rounded">Entity Legibility</span>
+                <span class="text-[10px] font-mono bg-gray-800 text-gray-400 px-2 py-1 rounded">LLM Query Fan-Out</span>
+                <span class="text-[10px] font-mono bg-gray-800 text-gray-400 px-2 py-1 rounded">Live AI Sampling</span>
+            </div>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight">AI Visibility Teardown: Diagnosing a 0% Citation Rate</h1>
+            <p class="text-xl text-gray-400 font-light leading-relaxed">
+                A live, four-engine forensic teardown of three competing regional sites — diagnosing why the brand with the <em class="text-white not-italic font-semibold">fewest reviews and lowest authority</em> won 45% of AI citations, while the "strongest" site on paper was cited <em class="text-white not-italic font-semibold">0%</em> of the time.
+            </p>
+        </header>
+
+        <!-- Project Metainfo Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 bg-gray-900/10 border border-gray-900 p-6 rounded-xl font-mono text-xs">
+            <div>
+                <span class="text-gray-500 block mb-1">SAMPLE</span>
+                <span class="text-white font-bold">3 sites · 20 queries</span>
+            </div>
+            <div>
+                <span class="text-gray-500 block mb-1">ENGINES</span>
+                <span class="text-white font-bold">ChatGPT · Perplexity · Gemini · AIO</span>
+            </div>
+            <div>
+                <span class="text-gray-500 block mb-1">RESULT</span>
+                <span class="text-white font-bold">45% vs. 5% vs. 0%</span>
+            </div>
+            <div>
+                <span class="text-gray-500 block mb-1">ROOT CAUSE</span>
+                <span class="text-white font-bold">Entity Legibility Gap</span>
+            </div>
+        </div>
+
+        <!-- Case Content -->
+        <main class="space-y-12 text-gray-300 text-sm leading-relaxed">
+
+            <!-- Section 1: The Diagnostic Question -->
+            <section>
+                <h2 class="text-xl font-bold mb-4 text-white flex items-center gap-3">
+                    <span class="text-brand"><i class="fa-solid fa-magnifying-glass-chart"></i></span> The Diagnostic Question
+                </h2>
+                <p class="mb-4">
+                    When a high-budget, professionally designed website earns <strong class="text-white">zero</strong> citations in ChatGPT, Perplexity, or Google AI Overviews, the legacy SEO playbook has no answer. "Build more backlinks, get more reviews, publish more posts" cannot explain why one brand wins AI citations while an industry leader stays invisible.
+                </p>
+                <p>
+                    To pressure-test that gap, I ran a self-initiated <strong class="text-white">triangulation teardown</strong>: three competing regional businesses in a high-ticket local service sector ($500k+ average project value), measured against how four major AI answer engines actually cite them. The goal wasn't to rank a client — it was to isolate the true variable that dictates AI visibility.
+                </p>
+            </section>
+
+            <!-- Section 2: Methodology -->
+            <section>
+                <h2 class="text-xl font-bold mb-4 text-white flex items-center gap-3">
+                    <span class="text-brand"><i class="fa-solid fa-vials"></i></span> Methodology: The Triangulation Teardown
+                </h2>
+                <p class="mb-6">
+                    The audit combined live answer-engine sampling with technical crawl forensics — deliberately avoiding a single automated "score" in favor of ground-truth citation data:
+                </p>
+                <ul class="space-y-3 pl-5 list-disc marker:text-brand mb-6">
+                    <li><strong class="text-white">20 live query clusters × 4 engines:</strong> sampling real buyer-intent prompts across ChatGPT, Perplexity, Gemini, and Google AI Overviews to record actual citation rates per brand.</li>
+                    <li><strong class="text-white">JavaScript-rendered crawls:</strong> capturing each site the way an answer engine ingests it — raw, post-render DOM — not the browser's clean visual layout.</li>
+                    <li><strong class="text-white">Authority baselining:</strong> logging Google review counts and Domain Rating to test whether legacy authority signals predicted AI outcomes.</li>
+                    <li><strong class="text-white">Citation scoring:</strong> visibility was gathered and scored with help from <a href="https://citerankscore.com/" target="_blank" rel="noopener" class="text-brand hover:text-brand-light underline">CiteRank</a>, then cross-checked against a third-party automated "GEO readiness" index.</li>
+                </ul>
+            </section>
+
+            <!-- Section 3: Findings -->
+            <section>
+                <h2 class="text-xl font-bold mb-4 text-white flex items-center gap-3">
+                    <span class="text-brand"><i class="fa-solid fa-table-cells"></i></span> Findings: The Data Contradicted Every Legacy Metric
+                </h2>
+
+                <img src="/assets/blog/why-0-ai-visibility-isnt-an-seo-problem/performance-comparison.jpg" alt="AI Search Visibility and SEO Performance comparison across the three audited brands" class="w-full rounded-xl border border-gray-800 my-6" loading="lazy">
+
+                <div class="overflow-x-auto border border-gray-900 rounded-xl mb-6">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-gray-900/40 text-white font-mono text-xs border-b border-gray-900">
+                                <th class="p-4">Business</th>
+                                <th class="p-4 text-right">Google Reviews</th>
+                                <th class="p-4 text-right">Domain Rating</th>
+                                <th class="p-4 text-right">Automated Score</th>
+                                <th class="p-4 text-right">AI Visibility</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-900 text-xs">
+                            <tr>
+                                <td class="p-4 font-bold text-white">Brand A</td>
+                                <td class="p-4 text-right text-gray-400">73 (fewest)</td>
+                                <td class="p-4 text-right text-gray-400">10 (lowest)</td>
+                                <td class="p-4 text-right text-gray-400">76 / 100</td>
+                                <td class="p-4 text-right font-mono text-brand font-bold">45% — winner</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-bold text-white">Brand B</td>
+                                <td class="p-4 text-right text-gray-400">181 (most)</td>
+                                <td class="p-4 text-right text-gray-400">28 (highest)</td>
+                                <td class="p-4 text-right text-gray-400">68 / 100</td>
+                                <td class="p-4 text-right font-mono text-gray-300 font-bold">5%</td>
+                            </tr>
+                            <tr>
+                                <td class="p-4 font-bold text-white">Brand C</td>
+                                <td class="p-4 text-right text-gray-400">89 (mid)</td>
+                                <td class="p-4 text-right text-gray-400">14 (mid)</td>
+                                <td class="p-4 text-right text-gray-400">78 (highest)</td>
+                                <td class="p-4 text-right font-mono text-red-400 font-bold">0% — invisible</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <ul class="space-y-3 pl-5 list-disc marker:text-brand">
+                    <li><strong class="text-white">Reviews didn't decide it:</strong> Brand B had more than double Brand A's reviews — and was virtually invisible.</li>
+                    <li><strong class="text-white">Domain Rating didn't decide it:</strong> Brand B carried nearly triple the authority metric — and lost badly.</li>
+                    <li><strong class="text-white">Automated tools didn't decide it:</strong> Brand C scored <em class="text-white not-italic font-semibold">highest</em> on an automated GEO-readiness index (78/100) yet was cited 0% of the time.</li>
+                </ul>
+            </section>
+
+            <!-- Section 4: Forensic Insight -->
+            <section>
+                <h2 class="text-xl font-bold mb-4 text-white flex items-center gap-3">
+                    <span class="text-brand"><i class="fa-solid fa-user-gear"></i></span> Forensic Insight: Filtering the False Positives
+                </h2>
+                <p class="mb-4">
+                    Automated tooling actively misled the diagnosis. During Brand C's crawl, an audit tool flagged <strong class="text-white">30+ "orphaned pages"</strong> — the kind of alarming finding that triggers hours of unnecessary remediation on a junior report.
+                </p>
+                <p>
+                    Manual review told a different story: those URLs were standard paginated archive pages from older blog content — not broken, not orphaned. Separating a real defect from a scanner false-positive is exactly where 15 years of hands-on crawl experience replaces a dashboard score. The tool measured the wrong thing; the human isolated the right one.
+                </p>
+            </section>
+
+            <!-- Section 5: Root-Cause Diagnosis -->
+            <section>
+                <h2 class="text-xl font-bold mb-4 text-white flex items-center gap-3">
+                    <span class="text-brand"><i class="fa-solid fa-diagram-project"></i></span> Root-Cause Diagnosis: Query Fan-Out &amp; Entity Legibility
+                </h2>
+                <p class="mb-4">
+                    When a buyer asks an LLM a complex question ("Who are the best design-build contractors in [City]?"), the engine <strong class="text-white">fans out</strong> — decomposing the prompt into sub-queries (timeline, cost per square foot, permitting) and retrieving a distinct, extractable source for each before synthesizing one answer.
+                </p>
+
+                <img src="/assets/blog/why-0-ai-visibility-isnt-an-seo-problem/fanout-diagram.jpg" alt="AI engine fan-out retrieval and citation mechanism: the money query is decomposed into sub-queries, each cites a source, and the engine synthesizes one answer" class="w-full rounded-xl border border-gray-800 my-6" loading="lazy">
+
+                <p>
+                    Brand C had genuinely strong material — awards, project showcases, community guides — but it was published in <strong class="text-white">gallery and announcement formats</strong>, not answer-structured or schema-connected content. The raw expertise existed; the engines simply had nothing extractable to cite. The deciding variable wasn't authority or volume. It was <strong class="text-white">entity legibility</strong>.
+                </p>
+            </section>
+
+            <!-- Section 6: Remediation Blueprint -->
+            <section>
+                <h2 class="text-xl font-bold mb-4 text-white flex items-center gap-3">
+                    <span class="text-brand"><i class="fa-solid fa-screwdriver-wrench"></i></span> The Remediation Blueprint
+                </h2>
+                <p class="mb-6">
+                    Diagnosis is half the engagement; the fix is a staged, technical build I structure across four phases:
+                </p>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="border border-gray-800 rounded-lg p-5 bg-gray-900/20">
+                        <h3 class="text-sm font-bold text-brand mb-2">1 · Entity &amp; Technical Architecture</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">Connected JSON-LD <code class="bg-white/10 px-1 rounded">@graph</code> chains (LocalBusiness → Service → FAQPage → Person) unified via <code class="bg-white/10 px-1 rounded">sameAs</code> nodes, consolidating split-market identities.</p>
+                    </div>
+                    <div class="border border-gray-800 rounded-lg p-5 bg-gray-900/20">
+                        <h3 class="text-sm font-bold text-brand mb-2">2 · Fan-Out Content Optimization</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">Answer-shaped money pages: question-framed H2s, concise extractable lead paragraphs, and explicit E-E-A-T author signaling built for LLM parsing.</p>
+                    </div>
+                    <div class="border border-gray-800 rounded-lg p-5 bg-gray-900/20">
+                        <h3 class="text-sm font-bold text-brand mb-2">3 · Managed Off-Page Authority</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">Field-level NAP corroboration across regional directories and aggregators, plus digital PR placement in the editorial listicles AI engines reference.</p>
+                    </div>
+                    <div class="border border-gray-800 rounded-lg p-5 bg-gray-900/20">
+                        <h3 class="text-sm font-bold text-brand mb-2">4 · Continuous Tracking &amp; Defense</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed">Re-scanning citation rates across ChatGPT, Perplexity, Gemini, and Google AIO to track visibility movement and defend hard-won citations.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 7: Skills Demonstrated -->
+            <section>
+                <h2 class="text-xl font-bold mb-4 text-white flex items-center gap-3">
+                    <span class="text-brand"><i class="fa-solid fa-list-check"></i></span> Skillset Demonstrated
+                </h2>
+                <div class="flex flex-wrap gap-2">
+                    <span class="text-xs font-mono bg-brand/10 text-brand px-3 py-1.5 rounded-full border border-brand/20">Multi-engine AI visibility sampling</span>
+                    <span class="text-xs font-mono bg-brand/10 text-brand px-3 py-1.5 rounded-full border border-brand/20">Query fan-out &amp; sub-intent mapping</span>
+                    <span class="text-xs font-mono bg-brand/10 text-brand px-3 py-1.5 rounded-full border border-brand/20">Entity &amp; JSON-LD @graph architecture</span>
+                    <span class="text-xs font-mono bg-brand/10 text-brand px-3 py-1.5 rounded-full border border-brand/20">JavaScript-rendered crawl forensics</span>
+                    <span class="text-xs font-mono bg-brand/10 text-brand px-3 py-1.5 rounded-full border border-brand/20">Human-in-the-loop false-positive filtering</span>
+                    <span class="text-xs font-mono bg-brand/10 text-brand px-3 py-1.5 rounded-full border border-brand/20">Competitive triangulation methodology</span>
+                    <span class="text-xs font-mono bg-brand/10 text-brand px-3 py-1.5 rounded-full border border-brand/20">E-E-A-T &amp; content-structure diagnosis</span>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section class="border border-brand/20 rounded-2xl p-8 bg-brand/[.03] text-center">
+                <h2 class="text-lg md:text-xl font-bold mb-3 text-white">Want this teardown run on your brand or client portfolio?</h2>
+                <p class="text-gray-400 max-w-xl mx-auto mb-6">I run this diagnostic white-label for agencies and directly for high-ticket local businesses. Read the full public breakdown, or get in touch.</p>
+                <div class="flex flex-wrap gap-3 justify-center">
+                    <a href="/blog/why-0-ai-visibility-isnt-an-seo-problem/" class="border border-gray-700 px-5 py-2.5 rounded-lg font-semibold text-sm hover:border-brand/60 transition-colors">Read the full breakdown →</a>
+                    <a href="/for-agencies/" class="bg-brand text-black font-bold px-5 py-2.5 rounded-lg text-sm hover:bg-brand-light transition-colors">Agency partnerships →</a>
+                    <a href="mailto:hello@entityandsearch.com" class="border border-gray-700 px-5 py-2.5 rounded-lg font-semibold text-sm hover:border-brand/60 transition-colors">hello@entityandsearch.com</a>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="mt-20 py-8 border-t border-gray-900 text-center">
+            <p class="text-gray-600 text-xs uppercase tracking-widest">© 2026 Randy Holland • EntityAndSearch • Vancouver, WA</p>
+        </footer>
+    </div>
+</body>
+</html>
