@@ -213,7 +213,7 @@ document.addEventListener('click', function(e){
 <div class="max-w-6xl mx-auto w-full flex-grow">
 
     <!-- top nav -->
-    <nav class="flex items-center justify-between mb-12 mt-2">
+    <nav class="flex items-center justify-between mb-12 mt-2 relative">
         <a href="/" class="inline-flex items-center" aria-label="EntityAndSearch home"><span class="bg-white rounded-xl px-3 py-2 md:px-4 md:py-3 inline-flex"><img src="/logo-entityandsearch.png" alt="EntityAndSearch" class="h-12 sm:h-16 md:h-32 block"></span></a>
         <div class="hidden sm:flex gap-5 text-sm text-gray-500 whitespace-nowrap items-center">
             <a href="#about" class="hover:text-brand transition-colors hidden sm:inline">About</a>
@@ -223,7 +223,25 @@ document.addEventListener('click', function(e){
             <a href="#rates" class="hover:text-brand transition-colors hidden sm:inline">Rates</a>
             <a href="/blog/" class="hover:text-brand transition-colors">Blog</a>
         </div>
+        <button id="faNavBtn" type="button" aria-label="Open menu" aria-expanded="false" class="sm:hidden text-2xl text-gray-200 w-11 h-11 flex items-center justify-center rounded-lg hover:bg-white/5 transition-colors"><i class="fa-solid fa-bars"></i></button>
+        <div id="faNavMenu" class="hidden absolute top-full right-0 mt-2 w-52 bg-[#0E2951] border border-white/10 rounded-xl shadow-xl overflow-hidden z-50">
+            <a href="#about" class="block px-5 py-3 text-gray-200 hover:bg-brand/20 hover:text-white transition-colors">About</a>
+            <a href="#model" class="block px-5 py-3 text-gray-200 hover:bg-brand/20 hover:text-white transition-colors border-t border-white/5">Model</a>
+            <a href="#work" class="block px-5 py-3 text-gray-200 hover:bg-brand/20 hover:text-white transition-colors border-t border-white/5">Capability</a>
+            <a href="#cases" class="block px-5 py-3 text-gray-200 hover:bg-brand/20 hover:text-white transition-colors border-t border-white/5">Case files</a>
+            <a href="#rates" class="block px-5 py-3 text-gray-200 hover:bg-brand/20 hover:text-white transition-colors border-t border-white/5">Rates</a>
+            <a href="/blog/" class="block px-5 py-3 text-gray-200 hover:bg-brand/20 hover:text-white transition-colors border-t border-white/5">Blog</a>
+        </div>
     </nav>
+<script>
+(function(){ var b=document.getElementById('faNavBtn'), m=document.getElementById('faNavMenu'); if(!b||!m) return;
+  function close(){ m.classList.add('hidden'); b.setAttribute('aria-expanded','false'); b.querySelector('i').className='fa-solid fa-bars'; }
+  b.addEventListener('click',function(e){ e.stopPropagation(); var open=m.classList.toggle('hidden')===false; b.setAttribute('aria-expanded',open?'true':'false'); b.querySelector('i').className=open?'fa-solid fa-xmark':'fa-solid fa-bars'; });
+  m.addEventListener('click',function(e){ if(e.target.tagName==='A') close(); });
+  document.addEventListener('click',function(e){ if(!m.classList.contains('hidden')&&!m.contains(e.target)&&!b.contains(e.target)) close(); });
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape') close(); });
+})();
+</script>
 
     <!-- hero -->
     <header class="mb-16">
