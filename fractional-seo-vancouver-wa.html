@@ -51,6 +51,37 @@ document.addEventListener('click', function(e){
   <style>
     body { font-family: 'Urbanist', sans-serif; background-color: #0A1B30; color: #ffffff; }
     .card { background: rgba(255,255,255,.04); }
+
+    /* Free Local Visibility Check form (dark theme) */
+    .esvc{--esvc-brand:#1E8BCB;--esvc-light:#4FB6E0;--esvc-deep:#0E2951;
+      --esvc-line:rgba(255,255,255,.14);--esvc-muted:rgba(255,255,255,.62);
+      max-width:560px;margin:28px auto 0;text-align:left}
+    .esvc *{box-sizing:border-box}
+    .esvc-form{display:flex;flex-direction:column;gap:14px}
+    .esvc-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .esvc-field{display:flex;flex-direction:column;gap:6px}
+    .esvc-field label{font-size:13px;font-weight:700;color:#fff}
+    .esvc-field label span{color:var(--esvc-light)}
+    .esvc-field label em{font-weight:500;font-style:normal;color:var(--esvc-muted)}
+    .esvc-field input{width:100%;padding:12px 14px;font-size:15px;font-family:inherit;color:#fff;
+      background:rgba(255,255,255,.05);border:1px solid var(--esvc-line);border-radius:10px;
+      transition:border-color .15s,box-shadow .15s,background .15s}
+    .esvc-field input::placeholder{color:rgba(255,255,255,.4)}
+    .esvc-field input:focus{outline:none;border-color:var(--esvc-brand);
+      box-shadow:0 0 0 3px rgba(30,139,203,.25);background:rgba(255,255,255,.08)}
+    .esvc-btn{margin-top:4px;padding:14px 20px;font-size:16px;font-weight:800;font-family:inherit;color:#fff;cursor:pointer;
+      background:linear-gradient(135deg,var(--esvc-deep),var(--esvc-brand));border:0;border-radius:10px;
+      transition:transform .05s,opacity .15s,box-shadow .15s;box-shadow:0 8px 24px rgba(30,139,203,.25)}
+    .esvc-btn:hover{opacity:.95;box-shadow:0 10px 30px rgba(30,139,203,.35)}
+    .esvc-btn:active{transform:translateY(1px)}
+    .esvc-btn:disabled{opacity:.6;cursor:default;box-shadow:none}
+    .esvc-fine{margin:2px 0 0;font-size:12px;color:var(--esvc-muted);text-align:center}
+    .esvc-msg{margin:6px 0 0;padding:13px 15px;border-radius:10px;font-size:14px;line-height:1.45}
+    .esvc-ok{background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.4);color:#bbf7d0}
+    .esvc-ok strong{color:#dcfce7}
+    .esvc-err{background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.4);color:#fecaca}
+    .esvc-err a{color:#fecaca;font-weight:700}
+    @media (max-width:520px){.esvc-row{grid-template-columns:1fr}}
   </style>
   <script type="application/ld+json">
   {
@@ -168,7 +199,7 @@ document.addEventListener('click', function(e){
     <h1 class="text-4xl md:text-5xl font-extrabold mt-6 mb-5 tracking-tight leading-[1.08]">Fractional SEO &amp; GEO for Vancouver, WA and the Portland Metro</h1>
     <p class="text-lg md:text-xl text-gray-400 leading-relaxed max-w-2xl">I'm Randy Holland — a local, human-in-the-loop SEO and AI-search strategist. I help Clark County and Portland-metro service businesses get found in Google <em>and</em> cited by AI answer engines — without agency bloat or long retainers.</p>
     <div class="flex flex-wrap gap-3 mt-8">
-      <a href="mailto:hello@entityandsearch.com" class="bg-brand text-black font-bold px-6 py-3 rounded-lg hover:bg-brand-light transition-colors">Get a free local visibility check →</a>
+      <a href="#start" class="bg-brand text-black font-bold px-6 py-3 rounded-lg hover:bg-brand-light transition-colors">Get a free local visibility check →</a>
       <a href="https://www.linkedin.com/in/webrandyholland/" target="_blank" rel="noopener" class="border border-gray-700 px-6 py-3 rounded-lg font-semibold hover:border-brand/60 transition-colors">Connect on LinkedIn</a>
     </div>
     <p class="text-sm text-gray-500 mt-6">WSU Vancouver alum · 15+ years in technical SEO · in person across Southwest Washington &amp; the Portland metro</p>
@@ -240,8 +271,54 @@ document.addEventListener('click', function(e){
     <span class="text-xs font-bold tracking-widest text-brand uppercase">Free · no commitment</span>
     <h2 class="text-2xl md:text-3xl font-extrabold mt-4 max-w-2xl mx-auto leading-tight tracking-tight">Let's see where your business stands in local &amp; AI search.</h2>
     <p class="text-gray-400 max-w-xl mx-auto mt-4">Send me your site and I'll show you exactly where you're winning, where you're invisible to AI answer engines, and the first fixes — a real look at how I work before anything's on the table.</p>
-    <div class="flex flex-wrap gap-3 justify-center mt-8">
-      <a href="mailto:hello@entityandsearch.com" class="bg-brand text-black font-bold px-6 py-3 rounded-lg hover:bg-brand-light transition-colors">hello@entityandsearch.com</a>
+
+    <!-- ===== Free Local Visibility Check form (Web3Forms) ===== -->
+    <div class="esvc">
+      <form id="esvcForm" class="esvc-form" novalidate>
+        <!-- Web3Forms config (access_key is publishable by design) -->
+        <input type="hidden" name="access_key" value="fa5ea5cb-b99f-40c1-bacb-03ba24c879de">
+        <input type="hidden" name="subject" value="🔎 New Local Visibility Check request">
+        <input type="hidden" name="from_name" value="Entity &amp; Search — Local Visibility Check">
+        <!-- Honeypot: real people never fill this; bots do -> Web3Forms auto-rejects -->
+        <input type="checkbox" name="botcheck" class="esvc-hp" style="display:none !important" tabindex="-1" autocomplete="off">
+
+        <div class="esvc-field">
+          <label for="esvc-website">Your website <span>*</span></label>
+          <input id="esvc-website" type="url" name="website" placeholder="https://yourbusiness.com" required>
+        </div>
+
+        <div class="esvc-field">
+          <label for="esvc-email">Email <span>*</span></label>
+          <input id="esvc-email" type="email" name="email" placeholder="you@yourbusiness.com" required>
+        </div>
+
+        <div class="esvc-row">
+          <div class="esvc-field">
+            <label for="esvc-name">Name <em>(optional)</em></label>
+            <input id="esvc-name" type="text" name="name" placeholder="First name">
+          </div>
+          <div class="esvc-field">
+            <label for="esvc-city">City / market <em>(optional)</em></label>
+            <input id="esvc-city" type="text" name="city" placeholder="e.g. Vancouver, WA">
+          </div>
+        </div>
+
+        <button type="submit" class="esvc-btn">Send my free check →</button>
+        <p class="esvc-fine">No spam. Your info is only used to prepare your visibility check.</p>
+
+        <div id="esvc-success" class="esvc-msg esvc-ok" hidden>
+          ✅ <strong>Thanks — your free visibility check is on its way.</strong> I'll review your site and email your snapshot <strong>within 1 business day</strong>. Keep an eye on your inbox (and spam folder, just in case).
+        </div>
+        <div id="esvc-error" class="esvc-msg esvc-err" hidden>
+          Something went wrong sending that. Please email <a href="mailto:hello@entityandsearch.com">hello@entityandsearch.com</a> and I'll take care of it.
+        </div>
+      </form>
+    </div>
+    <!-- ===== /form ===== -->
+
+    <p class="text-sm text-gray-400 mt-8">Prefer to reach out directly?</p>
+    <div class="flex flex-wrap gap-3 justify-center mt-3">
+      <a href="mailto:hello@entityandsearch.com" class="border border-gray-700 px-6 py-3 rounded-lg font-semibold hover:border-brand/60 transition-colors">hello@entityandsearch.com</a>
       <a href="https://www.linkedin.com/in/webrandyholland/" target="_blank" rel="noopener" class="border border-gray-700 px-6 py-3 rounded-lg font-semibold hover:border-brand/60 transition-colors">Message me on LinkedIn →</a>
     </div>
     <p class="text-sm text-gray-400 mt-4">Prefer to talk? Call or text <a href="tel:+15034463931" class="text-brand hover:text-brand-light font-semibold">(503) 446-3931</a></p>
@@ -249,13 +326,51 @@ document.addEventListener('click', function(e){
   </section>
 </div>
 
-<footer class="max-w-4xl mx-auto w-full border-t border-gray-800 py-8 mt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500">
-  <p>© 2026 Randy Holland · EntityAndSearch · Vancouver, WA · <a href="tel:+15034463931" class="hover:text-brand transition-colors">(503) 446-3931</a></p>
-  <div class="flex gap-4 mt-4 sm:mt-0">
-    <a href="/" class="hover:text-brand transition-colors">Home</a><span class="text-gray-700">|</span>
-    <a href="/for-agencies/" class="hover:text-brand transition-colors">For Agencies</a><span class="text-gray-700">|</span>
-    <a href="/blog/" class="hover:text-brand transition-colors">Blog</a>
+<!-- ============================================================
+     FOOTER: reconstructed — your paste cut off above this point.
+     Compare against your live footer; if yours differs, keep yours.
+     ============================================================ -->
+<footer class="max-w-4xl mx-auto w-full mt-8 pt-8 border-t border-gray-800 text-sm text-gray-500">
+  <div class="flex flex-wrap items-center justify-between gap-4">
+    <p>&copy; <span id="yr"></span> EntityAndSearch · Vancouver, WA</p>
+    <nav class="flex flex-wrap gap-5">
+      <a href="/" class="hover:text-brand transition-colors">Home</a>
+      <a href="/for-agencies/" class="hover:text-brand transition-colors">For Agencies</a>
+      <a href="/blog/" class="hover:text-brand transition-colors">Blog</a>
+      <a href="tel:+15034463931" class="hover:text-brand transition-colors">(503) 446-3931</a>
+    </nav>
   </div>
 </footer>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
+
+<!-- Free Local Visibility Check — Web3Forms submit handler -->
+<script>
+  (function(){
+    var form = document.getElementById('esvcForm');
+    if(!form) return;
+    var ok = document.getElementById('esvc-success');
+    var err = document.getElementById('esvc-error');
+    var btn = form.querySelector('.esvc-btn');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      ok.hidden = true; err.hidden = true;
+      if(!form.reportValidity()) return;
+      var data = Object.fromEntries(new FormData(form).entries());
+      var original = btn.textContent;
+      btn.disabled = true; btn.textContent = 'Sending…';
+      fetch('https://api.web3forms.com/submit', {
+        method:'POST',
+        headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body: JSON.stringify(data)
+      })
+      .then(function(r){ return r.json(); })
+      .then(function(j){
+        if(j.success){ form.reset(); ok.hidden = false; btn.textContent = 'Sent ✓'; }
+        else { err.hidden = false; btn.disabled = false; btn.textContent = original; }
+      })
+      .catch(function(){ err.hidden = false; btn.disabled = false; btn.textContent = original; });
+    });
+  })();
+</script>
 </body>
 </html>
