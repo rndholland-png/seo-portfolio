@@ -7,6 +7,8 @@ tags: [GEO, AIO, AI Search]
 image: /assets/blog/why-ai-rank-tracking-is-broken-and-how-ai-search-works/cover.jpg
 ---
 
+![AI answer engines — ChatGPT, Perplexity, Google AI Overviews, and Gemini — connected as nodes in a shared knowledge network](/assets/blog/why-ai-rank-tracking-is-broken-and-how-ai-search-works/cover.jpg)
+
 If you've been watching the debate around AI search, you've likely noticed a lot of skepticism around tools claiming they can "track your rankings" in ChatGPT, Perplexity, or Google's AI Overviews.
 
 The skepticism is entirely justified. Legacy SEO tracking tools were built for a world of static links and fixed keywords. But AI doesn't work like a standard search engine:
