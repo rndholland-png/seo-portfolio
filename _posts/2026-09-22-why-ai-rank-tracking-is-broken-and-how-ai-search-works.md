@@ -4,6 +4,7 @@ title: "Why AI Rank Tracking Is Broken (And How AI Search Actually Works)"
 date: 2026-09-22
 description: "AI rank trackers sell vanity metrics and fake search volume. Here's why you can't 'rank #1' in ChatGPT or Perplexity — and how I measure real AI visibility with entity architecture and CiteRank."
 tags: [GEO, AIO, AI Search]
+image: /assets/blog/why-ai-rank-tracking-is-broken-and-how-ai-search-works/cover.jpg
 ---
 
 If you've been watching the debate around AI search, you've likely noticed a lot of skepticism around tools claiming they can "track your rankings" in ChatGPT, Perplexity, or Google's AI Overviews.
@@ -38,7 +39,7 @@ Here is what that means in plain English:
 
 2. **Testing Real Buyer Prompts (Statistical Sampling):** Instead of trusting a single rank check, I test dozens of realistic buyer questions across clean AI sessions. This gives a true probability score of how often your business appears when potential clients are actively shopping.
 
-3. **Measuring True Impact with CiteRank:** To eliminate the guesswork, I rely on [CiteRank](https://citerankscore.com/). Developed by my former colleague Michael Cortez, CiteRank cuts through fake search volume numbers and evaluates whether your business is actually being cited and sourced by AI engines. It provides an honest, defensible benchmark of your true AI footprint.
+3. **Measuring True Impact with CiteRank:** To eliminate the guesswork, I rely on [CiteRank](https://citerankscore.com/). Developed by my former colleague [Michael Cortez](https://michaelpatrickcortez.com/), CiteRank cuts through fake search volume numbers and evaluates whether your business is actually being cited and sourced by AI engines. It provides an honest, defensible benchmark of your true AI footprint.
 
 ## The Bottom Line
 
