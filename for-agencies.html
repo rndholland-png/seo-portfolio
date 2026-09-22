@@ -1,7 +1,5 @@
 ---
 permalink: /for-agencies/
-redirect_from:
-  - /for-agencies.html
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -207,6 +205,37 @@ document.addEventListener('click', function(e){
         @keyframes pulse-dot { 0%{box-shadow:0 0 0 0 rgba(30,139,203,.5)} 70%{box-shadow:0 0 0 8px rgba(30,139,203,0)} 100%{box-shadow:0 0 0 0 rgba(30,139,203,0)} }
         .pulse { animation: pulse-dot 2.4s infinite; }
         @media (prefers-reduced-motion: reduce){ .pulse{animation:none} * {transition:none!important} }
+
+        /* Free GEO Teardown form (dark theme) */
+        .esvc{--esvc-brand:#1E8BCB;--esvc-light:#4FB6E0;--esvc-deep:#0E2951;
+          --esvc-line:rgba(255,255,255,.14);--esvc-muted:rgba(255,255,255,.62);
+          max-width:560px;margin:28px auto 0;text-align:left}
+        .esvc *{box-sizing:border-box}
+        .esvc-form{display:flex;flex-direction:column;gap:14px}
+        .esvc-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+        .esvc-field{display:flex;flex-direction:column;gap:6px}
+        .esvc-field label{font-size:13px;font-weight:700;color:#fff}
+        .esvc-field label span{color:var(--esvc-light)}
+        .esvc-field label em{font-weight:500;font-style:normal;color:var(--esvc-muted)}
+        .esvc-field input{width:100%;padding:12px 14px;font-size:15px;font-family:inherit;color:#fff;
+          background:rgba(255,255,255,.05);border:1px solid var(--esvc-line);border-radius:10px;
+          transition:border-color .15s,box-shadow .15s,background .15s}
+        .esvc-field input::placeholder{color:rgba(255,255,255,.4)}
+        .esvc-field input:focus{outline:none;border-color:var(--esvc-brand);
+          box-shadow:0 0 0 3px rgba(30,139,203,.25);background:rgba(255,255,255,.08)}
+        .esvc-btn{margin-top:4px;padding:14px 20px;font-size:16px;font-weight:800;font-family:inherit;color:#fff;cursor:pointer;
+          background:linear-gradient(135deg,var(--esvc-deep),var(--esvc-brand));border:0;border-radius:10px;
+          transition:transform .05s,opacity .15s,box-shadow .15s;box-shadow:0 8px 24px rgba(30,139,203,.25)}
+        .esvc-btn:hover{opacity:.95;box-shadow:0 10px 30px rgba(30,139,203,.35)}
+        .esvc-btn:active{transform:translateY(1px)}
+        .esvc-btn:disabled{opacity:.6;cursor:default;box-shadow:none}
+        .esvc-fine{margin:2px 0 0;font-size:12px;color:var(--esvc-muted);text-align:center}
+        .esvc-msg{margin:6px 0 0;padding:13px 15px;border-radius:10px;font-size:14px;line-height:1.45}
+        .esvc-ok{background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.4);color:#bbf7d0}
+        .esvc-ok strong{color:#dcfce7}
+        .esvc-err{background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.4);color:#fecaca}
+        .esvc-err a{color:#fecaca;font-weight:700}
+        @media (max-width:520px){.esvc-row{grid-template-columns:1fr}}
     </style>
 </head>
 <body class="p-6 md:p-8 min-h-screen flex flex-col">
@@ -466,9 +495,55 @@ document.addEventListener('click', function(e){
     <section id="start" class="scroll-mt-8 border border-brand/20 rounded-2xl p-10 md:p-14 text-center bg-brand/[.03] mb-8">
         <span class="text-xs font-bold tracking-widest text-brand uppercase">Free · no commitment</span>
         <h2 class="text-2xl md:text-4xl font-extrabold mt-4 max-w-2xl mx-auto leading-tight tracking-tight">Send me one client site &mdash; I'll send back a teardown showing exactly where it stands in AI search.</h2>
-        <p class="text-gray-400 max-w-xl mx-auto mt-4">You'll see exactly where an AI answer is intercepting their traffic and the first fixes — a real look at how I work before anything's on the table.</p>
-        <div class="flex flex-wrap gap-3 justify-center mt-8">
-            <a href="https://www.linkedin.com/in/webrandyholland/" target="_blank" rel="noopener" class="bg-brand text-black font-bold px-6 py-3 rounded-lg hover:bg-brand-light transition-colors">Message me on LinkedIn →</a>
+        <p class="text-gray-400 max-w-xl mx-auto mt-4">You'll see exactly where an AI answer is intercepting their traffic and the first fixes — a real look at how I work before anything's on the table. White-label: I never contact your client.</p>
+
+        <!-- ===== Free GEO Teardown form (Web3Forms) ===== -->
+        <div class="esvc">
+          <form id="gtdForm" class="esvc-form" novalidate>
+            <!-- Web3Forms config (access_key is publishable by design) -->
+            <input type="hidden" name="access_key" value="fa5ea5cb-b99f-40c1-bacb-03ba24c879de">
+            <input type="hidden" name="subject" value="🔧 New GEO teardown request (agency)">
+            <input type="hidden" name="from_name" value="Entity &amp; Search — GEO Teardown">
+            <!-- Honeypot: real people never fill this; bots do -> Web3Forms auto-rejects -->
+            <input type="checkbox" name="botcheck" class="esvc-hp" style="display:none !important" tabindex="-1" autocomplete="off">
+
+            <div class="esvc-field">
+              <label for="gtd-site">Client site to tear down <span>*</span></label>
+              <input id="gtd-site" type="url" name="client_site" placeholder="https://yourclient.com" required>
+            </div>
+
+            <div class="esvc-field">
+              <label for="gtd-email">Your email <span>*</span></label>
+              <input id="gtd-email" type="email" name="email" placeholder="you@youragency.com" required>
+            </div>
+
+            <div class="esvc-row">
+              <div class="esvc-field">
+                <label for="gtd-name">Your name <em>(optional)</em></label>
+                <input id="gtd-name" type="text" name="name" placeholder="First name">
+              </div>
+              <div class="esvc-field">
+                <label for="gtd-agency">Agency <em>(optional)</em></label>
+                <input id="gtd-agency" type="text" name="agency" placeholder="Agency name">
+              </div>
+            </div>
+
+            <button type="submit" class="esvc-btn">Send me the free teardown →</button>
+            <p class="esvc-fine">White-label &amp; confidential. I never contact your client — this is just for me to run the teardown.</p>
+
+            <div id="gtd-success" class="esvc-msg esvc-ok" hidden>
+              ✅ <strong>Got it — your GEO teardown is on the way.</strong> I'll tear down that site and email you the findings <strong>within 1 business day</strong>. Keep an eye on your inbox (and spam folder, just in case).
+            </div>
+            <div id="gtd-error" class="esvc-msg esvc-err" hidden>
+              Something went wrong sending that. Please email <a href="mailto:hello@entityandsearch.com">hello@entityandsearch.com</a> and I'll take care of it.
+            </div>
+          </form>
+        </div>
+        <!-- ===== /form ===== -->
+
+        <p class="text-sm text-gray-400 mt-8">Prefer to reach out directly?</p>
+        <div class="flex flex-wrap gap-3 justify-center mt-3">
+            <a href="https://www.linkedin.com/in/webrandyholland/" target="_blank" rel="noopener" class="border border-gray-700 px-6 py-3 rounded-lg font-semibold hover:border-brand/60 transition-colors">Message me on LinkedIn →</a>
             <a href="mailto:hello@entityandsearch.com" class="border border-gray-700 px-6 py-3 rounded-lg font-semibold hover:border-brand/60 transition-colors">hello@entityandsearch.com</a>
         </div>
     </section>
@@ -501,5 +576,36 @@ document.addEventListener('click', function(e){
   },2400);
 })();
 </script>
+
+<!-- Free GEO Teardown — Web3Forms submit handler -->
+<script>
+  (function(){
+    var form = document.getElementById('gtdForm');
+    if(!form) return;
+    var ok = document.getElementById('gtd-success');
+    var err = document.getElementById('gtd-error');
+    var btn = form.querySelector('.esvc-btn');
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      ok.hidden = true; err.hidden = true;
+      if(!form.reportValidity()) return;
+      var data = Object.fromEntries(new FormData(form).entries());
+      var original = btn.textContent;
+      btn.disabled = true; btn.textContent = 'Sending…';
+      fetch('https://api.web3forms.com/submit', {
+        method:'POST',
+        headers:{'Content-Type':'application/json','Accept':'application/json'},
+        body: JSON.stringify(data)
+      })
+      .then(function(r){ return r.json(); })
+      .then(function(j){
+        if(j.success){ form.reset(); ok.hidden = false; btn.textContent = 'Sent ✓'; }
+        else { err.hidden = false; btn.disabled = false; btn.textContent = original; }
+      })
+      .catch(function(){ err.hidden = false; btn.disabled = false; btn.textContent = original; });
+    });
+  })();
+</script>
 </body>
 </html>
+
