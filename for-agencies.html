@@ -599,7 +599,15 @@ document.addEventListener('click', function(e){
       })
       .then(function(r){ return r.json(); })
       .then(function(j){
-        if(j.success){ form.reset(); ok.hidden = false; btn.textContent = 'Sent ✓'; }
+        if(j.success){
+          form.reset(); ok.hidden = false; btn.textContent = 'Sent ✓';
+          if(typeof gtag === 'function'){
+            gtag('event', 'generate_lead', {
+              form_name: 'geo_teardown',
+              page_location: window.location.href
+            });
+          }
+        }
         else { err.hidden = false; btn.disabled = false; btn.textContent = original; }
       })
       .catch(function(){ err.hidden = false; btn.disabled = false; btn.textContent = original; });
